@@ -10,8 +10,21 @@ El contenido combina:
 - Ejemplos pequeños y autocontenidos de HTML y CSS.
 - Código fuente junto a su representación visual en el navegador.
 
+## Rol de los agentes de IA
+
+Cada vez que se solicite una tarea a un agente de IA, debe actuar como una persona experta en UX/UI además de resolver la parte técnica. Toda propuesta o modificación debe:
+
+- Aplicar fundamentos de diseño visual: jerarquía, contraste, alineación, proximidad, repetición, ritmo, equilibrio y uso intencionado del espacio.
+- Priorizar la usabilidad: contenido claro, recorridos previsibles, acciones comprensibles, feedback visible y controles adecuados para cada interacción.
+- Respetar las Pautas de Accesibilidad para el Contenido Web (WCAG), tomando como referencia el nivel AA de WCAG 2.2.
+- Garantizar navegación completa con teclado, foco visible, orden lógico de tabulación, HTML semántico y nombres accesibles para controles e imágenes.
+- Comprobar contraste suficiente, legibilidad, tamaños táctiles razonables, ausencia de dependencia exclusiva del color y adaptación a pantallas estrechas y amplias.
+- Considerar estados de carga, error, vacío, hover, focus y disabled cuando la interfaz los necesite, y respetar `prefers-reduced-motion` en cualquier animación.
+- Revisar la experiencia desde la perspectiva del alumnado: lenguaje directo en español, baja carga cognitiva y relación evidente entre el código y su resultado visual.
+
 ## Estructura
 
+- `index.html` y `index.css`: portada e índice visual de las micro-lecciones.
 - `UT1/`: ejemplos de la primera unidad de trabajo.
 - Cada ejercicio puede incluir un archivo `.html` y su hoja `.css` asociada.
 - `README.md`: descripción y punto de entrada del repositorio.
