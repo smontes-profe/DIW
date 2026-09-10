@@ -12,7 +12,7 @@ Cada ejemplo relaciona el código fuente con su representación visual para apoy
 ## Contenido
 
 - [Portada](index.html): índice visual de las micro-lecciones.
-- [UT1](UT1/index.html): unidad agrupada sobre fundamentos del diseño visual e interacción.
+- [UT1](UT1/index.html): unidad agrupada sobre fundamentos del diseño visual e interacción, incluyendo elementos visuales, distribución, tipografía web e iconografía.
 
 ## Cómo consultar los ejemplos
 

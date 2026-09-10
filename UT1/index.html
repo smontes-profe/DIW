@@ -20,13 +20,14 @@
         <a href="#punto-linea-forma">01</a>
         <a href="#plano-volumen-textura">02</a>
         <a href="#distribucion-espacio">03</a>
+        <a href="#tipografia-iconografia">04</a>
       </nav>
     </div>
   </header>
 
   <main id="contenido">
     <section class="unit-hero" aria-labelledby="titulo-unidad">
-      <p class="eyebrow">Unidad de trabajo 01 · 3 micro-lecciones</p>
+      <p class="eyebrow">Unidad de trabajo 01 · 4 micro-lecciones</p>
       <h1 id="titulo-unidad">Fundamentos del diseño visual e interacción</h1>
       <p>Una ruta para entender cómo los elementos, la profundidad y la distribución organizan la atención en una interfaz.</p>
     </section>
@@ -35,6 +36,7 @@
       <a href="#punto-linea-forma"><span>01</span> Punto, línea y forma</a>
       <a href="#plano-volumen-textura"><span>02</span> Plano, volumen y textura</a>
       <a href="#distribucion-espacio"><span>03</span> Distribución y espacio negativo</a>
+      <a href="#tipografia-iconografia"><span>04</span> Tipografía web e iconografía</a>
     </nav>
 
     <section class="lesson-section" id="punto-linea-forma" aria-labelledby="titulo-punto">
@@ -141,6 +143,54 @@
 }
 /* El espacio mejora la lectura */</code></pre>
         </article>
+      </div>
+    </section>
+
+    <section class="lesson-section typography-section" id="tipografia-iconografia" aria-labelledby="titulo-tipografia">
+      <div class="section-heading">
+        <p class="lesson-number">Micro-lección 04</p>
+        <h2 id="titulo-tipografia">Tipografía web e iconografía</h2>
+        <p>La tipografía define la legibilidad y la personalidad de una interfaz. Los iconos y los gráficos SVG comunican ideas de forma rápida y conservan su nitidez.</p>
+      </div>
+      <div class="example-grid">
+        <article class="example-card coral">
+          <h3>Serif</h3><p>Tradición y elegancia</p>
+          <div class="demo type-demo type-serif" role="img" aria-label="Texto con tipografía serif">Diseño que cuenta historias</div>
+          <pre><code>font-family: Georgia, serif;</code></pre>
+        </article>
+        <article class="example-card blue">
+          <h3>Sans-serif</h3><p>Claridad en pantalla</p>
+          <div class="demo type-demo type-sans" role="img" aria-label="Texto con tipografía sans-serif">Diseño que guía</div>
+          <pre><code>font-family: 'DM Sans', sans-serif;</code></pre>
+        </article>
+        <article class="example-card mustard">
+          <h3>Monospace</h3><p>Precisión para código</p>
+          <div class="demo type-demo type-mono" role="img" aria-label="Texto con tipografía monoespaciada">const interfaz = true;</div>
+          <pre><code>font-family: Consolas, monospace;</code></pre>
+        </article>
+      </div>
+      <div class="type-details">
+        <div>
+          <p class="eyebrow">Criterios de legibilidad</p>
+          <h3>Leer también es una experiencia.</h3>
+        </div>
+        <p><strong>16px · line-height: 1.5 · 60-75 caracteres</strong><br>El tamaño, el interlineado y el ancho de columna reducen la carga cognitiva. Un buen emparejamiento tipográfico establece contraste entre encabezado y cuerpo.</p>
+      </div>
+      <div class="iconography-demo">
+        <div>
+          <p class="eyebrow">Iconografía y SVG</p>
+          <h3>Un icono, una idea instantánea.</h3>
+          <p>Los SVG se definen matemáticamente: escalan sin pixelar y pueden incluir una etiqueta accesible.</p>
+          <pre><code>&lt;svg viewBox="0 0 64 64" role="img"
+  aria-label="Icono de accesibilidad"&gt;</code></pre>
+        </div>
+        <div class="icono-demo" role="img" aria-label="Icono de accesibilidad creado con SVG">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="32" r="28"></circle><circle cx="32" cy="19" r="4"></circle>
+            <path d="M18 27h28M32 27v19M32 34l-10 15M32 34l10 15"></path>
+          </svg>
+          <span>SVG nítido en cualquier pantalla</span>
+        </div>
       </div>
     </section>
 

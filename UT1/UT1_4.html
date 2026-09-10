@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tipografía web e iconografía</title>
+  <link rel="stylesheet" href="UT1_4.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html">DIW · Inicio</a>
+    <a href="index.html">UT1 · Índice de la unidad</a>
+  </header>
+
+  <main class="pagina">
+    <header class="cabecera">
+      <p class="etiqueta">Tipografía e iconografía · 04</p>
+      <h1>Tipografía web<br>e iconografía</h1>
+      <p class="introduccion">
+        La tipografía define la legibilidad y la personalidad de una interfaz. Los iconos
+        y los gráficos SVG comunican ideas de forma rápida y conservan su nitidez en cualquier pantalla.
+      </p>
+    </header>
+
+    <section class="ejemplos" aria-label="Ejemplos de clasificación tipográfica">
+      <article class="tarjeta tarjeta-serif">
+        <div class="titulo-tarjeta"><span>01</span><div><h2>Serif</h2><p>Tradición y elegancia</p></div></div>
+        <div class="muestra tipo-serif" aria-label="Ejemplo de texto con tipografía serif">Diseño que cuenta historias</div>
+        <div class="codigo"><strong>CSS</strong><pre>font-family: Georgia, serif;</pre></div>
+      </article>
+      <article class="tarjeta tarjeta-sans">
+        <div class="titulo-tarjeta"><span>02</span><div><h2>Sans-serif</h2><p>Claridad en pantalla</p></div></div>
+        <div class="muestra tipo-sans" aria-label="Ejemplo de texto con tipografía sans-serif">Diseño que guía</div>
+        <div class="codigo"><strong>CSS</strong><pre>font-family: 'DM Sans', sans-serif;</pre></div>
+      </article>
+      <article class="tarjeta tarjeta-mono">
+        <div class="titulo-tarjeta"><span>03</span><div><h2>Monospace</h2><p>Precisión para código</p></div></div>
+        <div class="muestra tipo-mono" aria-label="Ejemplo de texto con tipografía monoespaciada">const interfaz = true;</div>
+        <div class="codigo"><strong>CSS</strong><pre>font-family: Consolas, monospace;</pre></div>
+      </article>
+    </section>
+
+    <section class="legibilidad" aria-labelledby="legibilidad-titulo">
+      <div>
+        <p class="etiqueta">Criterios de legibilidad</p>
+        <h2 id="legibilidad-titulo">Leer también es una experiencia.</h2>
+        <p>Un texto web cómodo necesita tamaño, ritmo y una columna que no obligue a recorrer líneas interminables.</p>
+      </div>
+      <div class="texto-legible">
+        <p class="medida">16px · line-height: 1.5 · 65 caracteres</p>
+        <p>El cuerpo de texto debe mantenerse, como mínimo, en 16px. Un interlineado entre 1.4 y 1.6 y una columna de 60 a 75 caracteres mejoran la lectura y reducen la carga cognitiva.</p>
+      </div>
+    </section>
+
+    <section class="iconografia" aria-labelledby="iconografia-titulo">
+      <div>
+        <p class="etiqueta">Iconografía y SVG</p>
+        <h2 id="iconografia-titulo">Un icono, una idea instantánea.</h2>
+        <p>Los SVG se definen matemáticamente: escalan sin pixelar y pueden incluir una etiqueta accesible para comunicar su significado.</p>
+        <div class="codigo svg-code"><strong>SVG</strong><pre>&lt;svg viewBox="0 0 64 64" role="img"
+  aria-label="Icono de accesibilidad"&gt;
+  &lt;circle cx="32" cy="32" r="28" /&gt;
+&lt;/svg&gt;</pre></div>
+      </div>
+      <div class="icono-demo" role="img" aria-label="Icono de accesibilidad creado con SVG">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="28"></circle>
+          <circle cx="32" cy="19" r="4"></circle>
+          <path d="M18 27h28M32 27v19M32 34l-10 15M32 34l10 15"></path>
+        </svg>
+        <span>SVG nítido en cualquier pantalla</span>
+      </div>
+    </section>
+
+    <footer><span class="punto-footer"></span><p>ritmo · contraste · comunicación</p></footer>
+  </main>
+</body>
+</html>
