@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distribución y espacio negativo</title>
+  <link rel="stylesheet" href="UT1_3.css">
+</head>
+<body>
+  <main class="pagina">
+    <header class="cabecera">
+      <p class="etiqueta">Composición · 03</p>
+      <h1>Distribución<br>y espacio negativo</h1>
+      <p class="introduccion">
+        La posición y el tamaño de cada elemento construyen equilibrio. El espacio en
+        blanco también participa: separa, ordena y deja respirar la composición.
+      </p>
+    </header>
+
+    <section class="ejemplos" aria-label="Ejemplos de distribución y espacio negativo">
+      <article class="tarjeta tarjeta-simetria">
+        <div class="titulo-tarjeta">
+          <span>01</span>
+          <div>
+            <h2>Equilibrio simétrico</h2>
+            <p>Estabilidad y orden</p>
+          </div>
+        </div>
+
+        <div class="muestra muestra-simetria" aria-label="Composición simétrica con dos formas equivalentes">
+          <div class="eje"></div>
+          <div class="forma forma-izquierda"></div>
+          <div class="forma forma-derecha"></div>
+        </div>
+
+        <div class="codigo">
+          <strong>HTML</strong>
+          <pre>&lt;div class="composicion simetrica"&gt;
+  &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
+&lt;/div&gt;</pre>
+          <strong>CSS</strong>
+          <pre>.simetrica {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20%;
+}</pre>
+        </div>
+      </article>
+
+      <article class="tarjeta tarjeta-asimetria">
+        <div class="titulo-tarjeta">
+          <span>02</span>
+          <div>
+            <h2>Equilibrio asimétrico</h2>
+            <p>Tensión y movimiento</p>
+          </div>
+        </div>
+
+        <div class="muestra muestra-asimetria" aria-label="Composición asimétrica compensada por tamaño y posición">
+          <div class="forma grande"></div>
+          <div class="forma pequena"></div>
+          <div class="linea-equilibrio"></div>
+        </div>
+
+        <div class="codigo">
+          <strong>HTML</strong>
+          <pre>&lt;div class="composicion asimetrica"&gt;
+  &lt;span class="grande"&gt;&lt;/span&gt;
+  &lt;span class="pequena"&gt;&lt;/span&gt;
+&lt;/div&gt;</pre>
+          <strong>CSS</strong>
+          <pre>.grande { width: 110px; height: 110px; }
+.pequena { width: 36px; height: 36px; }
+/* El peso visual se compensa */</pre>
+        </div>
+      </article>
+
+      <article class="tarjeta tarjeta-espacio">
+        <div class="titulo-tarjeta">
+          <span>03</span>
+          <div>
+            <h2>Espacio negativo</h2>
+            <p>Silencio que organiza</p>
+          </div>
+        </div>
+
+        <div class="muestra muestra-espacio" aria-label="Composición con espacio negativo alrededor de una forma">
+          <div class="marco-espacio">
+            <span class="punto-espacio"></span>
+            <span class="texto-espacio">respira</span>
+          </div>
+        </div>
+
+        <div class="codigo">
+          <strong>HTML</strong>
+          <pre>&lt;div class="marco"&gt;
+  &lt;span&gt;respira&lt;/span&gt;
+&lt;/div&gt;</pre>
+          <strong>CSS</strong>
+          <pre>.marco {
+  padding: 42px;
+  background: white;
+}
+/* El espacio mejora la lectura */</pre>
+        </div>
+      </article>
+    </section>
+
+    <section class="idea-clave" aria-labelledby="idea-titulo">
+      <div>
+        <p class="etiqueta">Idea clave</p>
+        <h2 id="idea-titulo">El vacío también tiene peso visual</h2>
+      </div>
+      <p>
+        Una distribución equilibrada no busca que todo ocupe el mismo espacio. Busca que
+        cada elemento tenga el espacio que necesita para ser comprendido.
+      </p>
+    </section>
+
+    <footer>
+      <span class="punto-footer"></span>
+      <p>equilibrio · ritmo · respiración</p>
+    </footer>
+  </main>
+</body>
+</html>
