@@ -11,6 +11,7 @@ Cada ejemplo relaciona el código fuente con su representación visual para apoy
 
 ## Contenido
 
+- [Portada](index.html): índice visual de las micro-lecciones.
 - [UT1](UT1/): ejemplos sobre elementos del diseño visual, como punto, línea, forma, plano, volumen y textura.
 
 ## Cómo consultar los ejemplos
