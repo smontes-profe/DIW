@@ -21,13 +21,14 @@
         <a href="#plano-volumen-textura">02</a>
         <a href="#distribucion-espacio">03</a>
         <a href="#tipografia-iconografia">04</a>
+        <a href="#arquitectura-informacion">05</a>
       </nav>
     </div>
   </header>
 
   <main id="contenido">
     <section class="unit-hero" aria-labelledby="titulo-unidad">
-      <p class="eyebrow">Unidad de trabajo 01 · 4 micro-lecciones</p>
+      <p class="eyebrow">Unidad de trabajo 01 · 5 micro-lecciones</p>
       <h1 id="titulo-unidad">Fundamentos del diseño visual e interacción</h1>
       <p>Una ruta para entender cómo los elementos, la profundidad y la distribución organizan la atención en una interfaz.</p>
     </section>
@@ -37,6 +38,7 @@
       <a href="#plano-volumen-textura"><span>02</span> Plano, volumen y textura</a>
       <a href="#distribucion-espacio"><span>03</span> Distribución y espacio negativo</a>
       <a href="#tipografia-iconografia"><span>04</span> Tipografía web e iconografía</a>
+      <a href="#arquitectura-informacion"><span>05</span> Arquitectura de la información</a>
     </nav>
 
     <section class="lesson-section" id="punto-linea-forma" aria-labelledby="titulo-punto">
@@ -190,6 +192,40 @@
             <path d="M18 27h28M32 27v19M32 34l-10 15M32 34l10 15"></path>
           </svg>
           <span>SVG nítido en cualquier pantalla</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="lesson-section architecture-section" id="arquitectura-informacion" aria-labelledby="titulo-arquitectura">
+      <div class="section-heading">
+        <p class="lesson-number">Micro-lección 05</p>
+        <h2 id="titulo-arquitectura">Arquitectura de la información y mapas de navegación</h2>
+        <p>Organizar, orientar y acompañar: la propia web sirve como caso práctico para entender la jerarquía de contenidos, los mapas de navegación y los flujos de usuario.</p>
+      </div>
+      <div class="architecture-concepts">
+        <article class="architecture-concept"><span>01</span><h3>Organizar</h3><p>Agrupar contenidos relacionados y darles una jerarquía comprensible.</p></article>
+        <article class="architecture-concept"><span>02</span><h3>Orientar</h3><p>Hacer visibles las páginas y las rutas posibles.</p></article>
+        <article class="architecture-concept"><span>03</span><h3>Acompañar</h3><p>Guiar desde una intención hasta un resultado.</p></article>
+      </div>
+      <div class="architecture-map">
+        <div class="architecture-map-copy"><p class="eyebrow">Mapa de navegación</p><h3>La estructura de esta web</h3><p>El mapa representa la arquitectura real del repositorio: una entrada, una unidad y cinco micro-lecciones.</p></div>
+        <div class="map-visual" role="img" aria-label="Mapa de navegación: inicio conduce a UT1 y UT1 contiene cinco micro-lecciones">
+          <div class="map-node map-root"><span>Entrada</span><strong>DIW</strong></div><div class="map-arrow">↓</div><div class="map-node map-unit"><span>Unidad</span><strong>UT1</strong></div><div class="map-branch">→</div>
+          <div class="map-lessons"><span>01 Elementos</span><span>02 Profundidad</span><span>03 Distribución</span><span>04 Tipografía</span><span class="map-active">05 Arquitectura</span></div>
+        </div>
+        <pre><code>index.html
+└── UT1/index.html
+    ├── UT1_1.html · Elementos visuales
+    ├── UT1_2.html · Profundidad
+    ├── UT1_3.html · Distribución
+    ├── UT1_4.html · Tipografía
+    └── UT1_5.html · Arquitectura</code></pre>
+      </div>
+      <div class="user-flows">
+        <div class="architecture-map-copy"><p class="eyebrow">User flows</p><h3>Del objetivo a la acción</h3><p>Un flujo describe los pasos que necesita una persona para conseguir algo.</p></div>
+        <div class="flow-list">
+          <article><h3>Consultar una lección</h3><ol><li><b>01</b> Inicio</li><li><b>02</b> UT1</li><li><b>03</b> Lección</li><li><b>04</b> Resultado</li></ol></article>
+          <article><h3>Volver a orientarse</h3><ol><li><b>01</b> Ejemplo directo</li><li><b>02</b> Cabecera</li><li><b>03</b> Índice UT1</li><li><b>04</b> Nueva lección</li></ol></article>
         </div>
       </div>
     </section>

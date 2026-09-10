@@ -44,7 +44,8 @@ index.html · Diseño de interfaces web
     ├── 01 · Punto, línea y forma
     ├── 02 · Plano, volumen y textura
     ├── 03 · Distribución y espacio negativo
-    └── 04 · Tipografía web e iconografía
+    ├── 04 · Tipografía web e iconografía
+    └── 05 · Arquitectura de la información y mapas de navegación
 ```
 
 La página agrupada de UT1 es la entrada recomendada. Los archivos `UT1_*.html` se conservan como ejemplos independientes para facilitar el estudio de cada ejercicio por separado.

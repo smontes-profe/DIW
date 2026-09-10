@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arquitectura de la información y mapas de navegación</title>
+  <link rel="stylesheet" href="UT1_5.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html">DIW · Inicio</a>
+    <a href="index.html">UT1 · Índice de la unidad</a>
+  </header>
+
+  <main class="pagina">
+    <header class="cabecera">
+      <p class="etiqueta">Arquitectura de la información · 05</p>
+      <h1>Ordenar para<br>ser encontrado</h1>
+      <p class="introduccion">La arquitectura de la información organiza el contenido para que cada persona sepa dónde está, adónde puede ir y cómo volver atrás.</p>
+    </header>
+
+    <section class="conceptos" aria-label="Conceptos de arquitectura de la información">
+      <article><span class="numero">01</span><h2>Organizar</h2><p>Agrupar contenidos relacionados y darles una jerarquía comprensible.</p></article>
+      <article><span class="numero">02</span><h2>Orientar</h2><p>Ofrecer un mapa de navegación que haga visibles las rutas posibles.</p></article>
+      <article><span class="numero">03</span><h2>Acompañar</h2><p>Diseñar flujos que lleven a cada usuario desde una intención hasta un resultado.</p></article>
+    </section>
+
+    <section class="seccion" aria-labelledby="mapa-titulo">
+      <div class="seccion-cabecera"><p class="etiqueta">Mapa de navegación</p><h2 id="mapa-titulo">La estructura de esta web</h2><p>Un mapa de sitio representa las páginas y su relación jerárquica. Aquí se puede leer la arquitectura real del repositorio.</p></div>
+      <div class="sitemap" role="img" aria-label="Mapa de navegación: inicio conduce a UT1 y UT1 contiene cinco micro-lecciones">
+        <div class="nodo nodo-raiz"><span>Entrada</span><strong>DIW</strong><small>index.html</small></div>
+        <div class="conector conector-vertical"></div>
+        <div class="nodo nodo-unidad"><span>Unidad</span><strong>UT1</strong><small>index.html</small></div>
+        <div class="conector conector-horizontal"></div>
+        <div class="nodo-lista">
+          <div class="nodo"><span>01</span><strong>Elementos visuales</strong></div>
+          <div class="nodo"><span>02</span><strong>Profundidad</strong></div>
+          <div class="nodo"><span>03</span><strong>Distribución</strong></div>
+          <div class="nodo"><span>04</span><strong>Tipografía</strong></div>
+          <div class="nodo activo"><span>05</span><strong>Arquitectura</strong></div>
+        </div>
+      </div>
+      <pre class="codigo"><code>index.html
+└── UT1/index.html
+    ├── UT1_1.html  · Elementos visuales
+    ├── UT1_2.html  · Profundidad
+    ├── UT1_3.html  · Distribución
+    ├── UT1_4.html  · Tipografía
+    └── UT1_5.html  · Arquitectura</code></pre>
+    </section>
+
+    <section class="seccion" aria-labelledby="flujo-titulo">
+      <div class="seccion-cabecera"><p class="etiqueta">User flows</p><h2 id="flujo-titulo">Del objetivo a la acción</h2><p>Un flujo de usuario describe los pasos que necesita una persona para conseguir algo. Las decisiones deben ser visibles y los caminos, previsibles.</p></div>
+      <div class="flujos">
+        <article class="flujo flujo-alumno"><h3>Consultar una lección</h3><ol><li><span>01</span><strong>Inicio</strong><small>Encuentra la unidad</small></li><li><span>02</span><strong>UT1</strong><small>Ve el índice</small></li><li><span>03</span><strong>Lección</strong><small>Lee y observa</small></li><li><span>04</span><strong>Resultado</strong><small>Relaciona código y demo</small></li></ol></article>
+        <article class="flujo flujo-directo"><h3>Volver a orientarse</h3><ol><li><span>01</span><strong>Ejemplo directo</strong><small>Abre UT1_3.html</small></li><li><span>02</span><strong>Cabecera</strong><small>Reconoce el contexto</small></li><li><span>03</span><strong>Índice UT1</strong><small>Recupera la ruta</small></li><li><span>04</span><strong>Nueva lección</strong><small>Continúa explorando</small></li></ol></article>
+      </div>
+    </section>
+
+    <section class="idea-clave" aria-labelledby="idea-titulo"><p class="etiqueta">Idea clave</p><h2 id="idea-titulo">Una buena arquitectura se nota cuando no hay que pensar en ella.</h2><p>Si el contenido está bien organizado, el usuario encuentra el siguiente paso de forma natural. La arquitectura desaparece y queda la experiencia.</p></section>
+
+    <footer><span class="punto-footer"></span><p>jerarquía · orientación · recorrido</p></footer>
+  </main>
+</body>
+</html>
