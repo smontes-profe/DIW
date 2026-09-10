@@ -323,6 +323,10 @@ h2 {
   background: var(--panel);
 }
 
+.lesson-card-wide {
+  grid-column: 1 / -1;
+}
+
 .lesson-card-coral { border-top: 5px solid var(--coral); }
 .lesson-card-blue { border-top: 5px solid var(--blue); }
 
