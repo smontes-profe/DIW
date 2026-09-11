@@ -17,9 +17,7 @@
       </a>
       <nav aria-label="Navegación de la unidad">
         <a href="../index.html">Inicio</a>
-        <a href="#cascada">Cascada</a>
-        <a href="#herramientas">Herramientas</a>
-        <a href="#preprocesadores">Preprocesadores</a>
+        <a href="#tipos-estilos">Tipos de estilos</a>
       </nav>
     </div>
   </header>
@@ -27,109 +25,44 @@
   <main id="contenido">
     <section class="unit-hero" aria-labelledby="titulo-unidad">
       <p class="eyebrow">Unidad de trabajo 02 · Uso de estilos</p>
-      <h1 id="titulo-unidad">De una regla<br> a un sistema.</h1>
-      <p>Aprende a definir, asociar, comprobar y escalar estilos para crear interfaces web homogéneas, mantenibles y responsive.</p>
+      <h1 id="titulo-unidad">Tres formas<br>de aplicar CSS.</h1>
+      <p>CSS puede aplicarse a los documentos HTML de tres formas distintas, cada una con sus ventajas y casos de uso específicos.</p>
     </section>
 
     <nav class="lesson-index" aria-label="Índice de contenidos de UT2">
-      <a href="#cascada"><span>01</span> Aplicar y asociar</a>
-      <a href="#herramientas"><span>02</span> Verificar y adaptar</a>
-      <a href="#preprocesadores"><span>03</span> Escalar estilos</a>
+      <a href="#tipos-estilos"><span>01</span> Tipos de aplicación de estilos CSS</a>
     </nav>
 
-    <section class="lesson-section" id="cascada" aria-labelledby="titulo-cascada">
+    <section class="lesson-section" id="tipos-estilos" aria-labelledby="titulo-estilos">
       <div class="section-heading">
         <p class="lesson-number">Bloque 01</p>
-        <h2 id="titulo-cascada">La cascada decide.</h2>
-        <p>Los estilos pueden vivir en una etiqueta, en una clase o en una hoja externa. La forma de asociarlos cambia su alcance y su mantenimiento.</p>
+        <h2 id="titulo-estilos">Tipos de aplicación de estilos CSS</h2>
+        <p>El lugar donde se define una regla determina su prioridad, su alcance y lo fácil que será reutilizarla y mantenerla.</p>
       </div>
       <div class="cascade-demo">
         <article class="cascade-card cascade-inline">
-          <span class="cascade-label">Inline · directo</span>
-          <p style="color: #e86d59;">Este párrafo recibe un estilo directamente.</p>
-          <code>style="color: coral"</code>
+          <span class="cascade-label">01 · Estilos en línea</span>
+          <p style="color: red;">Texto con estilo directo</p>
+          <p class="card-explanation">Se declara en la propia etiqueta mediante `style`. Tiene máxima prioridad, pero dificulta la reutilización y el mantenimiento.</p>
+          <code>&lt;p style="color:red;"&gt;Texto&lt;/p&gt;</code>
         </article>
         <article class="cascade-card cascade-class">
-          <span class="cascade-label">Clase · reutilizable</span>
-          <p class="accent-text">Esta regla puede aplicarse a varios elementos.</p>
-          <code>.accent-text { color: coral; }</code>
+          <span class="cascade-label">02 · Estilos internos</span>
+          <p class="internal-text">Texto con una regla en &lt;style&gt;</p>
+          <p class="card-explanation">Se define dentro de una etiqueta `&lt;style&gt;` en el `&lt;head&gt;`. Es útil para una página única, pero no se reutiliza entre documentos.</p>
+          <code>&lt;style&gt;
+  p { color: blue; }
+&lt;/style&gt;</code>
         </article>
         <article class="cascade-card cascade-external">
-          <span class="cascade-label">Hoja externa · global</span>
-          <p>Una hoja asociada mantiene el sistema en un solo lugar.</p>
-          <code>&lt;link rel="stylesheet" href="index.css"&gt;</code>
+          <span class="cascade-label">03 · Hojas externas</span>
+          <p class="external-text">Texto con una hoja CSS vinculada</p>
+          <p class="card-explanation">Es un archivo `.css` independiente asociado desde el `&lt;head&gt;`. Es la opción recomendada por su reutilización y mantenibilidad.</p>
+          <code>&lt;link rel="stylesheet"
+  href="css/estilos.css"&gt;</code>
         </article>
       </div>
-      <div class="cascade-note"><strong>RA2 · a-b-c-g</strong><span>Modificar etiquetas · definir estilos directos · asociar hojas externas · crear clases.</span></div>
-    </section>
-
-    <section class="lesson-section" id="herramientas" aria-labelledby="titulo-herramientas">
-      <div class="section-heading">
-        <p class="lesson-number">Bloque 02</p>
-        <h2 id="titulo-herramientas">Diseñar también es comprobar.</h2>
-        <p>Una interfaz homogénea necesita herramientas que ayuden a detectar errores, comprobar el responsive y verificar que el código produce el resultado esperado.</p>
-      </div>
-      <div class="tools-grid">
-        <article class="tool-card">
-          <span class="tool-icon" aria-hidden="true">&lt;/&gt;</span>
-          <h3>Inspector</h3>
-          <p>Explora reglas, herencia, especificidad y estados directamente en el navegador.</p>
-          <span class="tool-status">CSS · cascada</span>
-        </article>
-        <article class="tool-card">
-          <span class="tool-icon" aria-hidden="true">✓</span>
-          <h3>Validadores</h3>
-          <p>Comprueba sintaxis, propiedades y errores antes de publicar una hoja de estilos.</p>
-          <span class="tool-status">CSS · calidad</span>
-        </article>
-        <article class="tool-card">
-          <span class="tool-icon" aria-hidden="true">↔</span>
-          <h3>Responsive</h3>
-          <p>Prueba distintas anchuras y confirma que la interfaz sigue siendo usable.</p>
-          <span class="tool-status">CSS · adaptación</span>
-        </article>
-      </div>
-      <div class="responsive-demo" role="img" aria-label="Una misma interfaz adaptada a una pantalla grande y a una pantalla pequeña">
-        <div class="device device-wide"><span></span><span></span><span></span></div>
-        <div class="device device-small"><span></span><span></span><span></span></div>
-        <p>Una regla · varias pantallas</p>
-      </div>
-      <div class="cascade-note blue-note"><strong>RA2 · h-i</strong><span>Utilizar herramientas de validación · analizar tecnologías y frameworks responsive.</span></div>
-    </section>
-
-    <section class="lesson-section" id="preprocesadores" aria-labelledby="titulo-preprocesadores">
-      <div class="section-heading">
-        <p class="lesson-number">Bloque 03</p>
-        <h2 id="titulo-preprocesadores">Pensar en sistemas.</h2>
-        <p>Los preprocesadores permiten trabajar con variables, mixins y funciones, y traducir después ese lenguaje a CSS estándar para el navegador.</p>
-      </div>
-      <div class="code-comparison">
-        <div class="code-panel"><span>SCSS · fuente</span><pre><code>$accent: #e86d59;
-
-@mixin card-border($color) {
-  border-top: 4px solid $color;
-}
-
-.card {
-  @include card-border($accent);
-}</code></pre></div>
-        <div class="code-arrow" aria-hidden="true">→</div>
-        <div class="code-panel compiled"><span>CSS · resultado</span><pre><code>.card {
-  border-top: 4px solid #e86d59;
-}</code></pre></div>
-      </div>
-      <div class="principles-row" aria-label="Conceptos de preprocesadores">
-        <span><b>Variables</b> guardan decisiones</span>
-        <span><b>Mixins</b> reutilizan patrones</span>
-        <span><b>Funciones</b> calculan valores</span>
-      </div>
-      <div class="cascade-note yellow-note"><strong>RA2 · j</strong><span>Analizar preprocesadores y traducir estilos comunes a código reconocible por los navegadores.</span></div>
-    </section>
-
-    <section class="outcomes" aria-labelledby="titulo-resultados">
-      <p class="eyebrow">Resultado de aprendizaje</p>
-      <h2 id="titulo-resultados">Crear interfaces homogéneas definiendo y aplicando estilos.</h2>
-      <p>La unidad avanza desde una regla puntual hasta un sistema de estilos verificable, responsive y preparado para crecer.</p>
+      <div class="cascade-note"><strong>RA2 · a-b-c</strong><span>Reconocer las posibilidades de HTML · definir estilos directos · asociar hojas externas.</span></div>
     </section>
   </main>
 
