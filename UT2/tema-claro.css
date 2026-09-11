@@ -1,0 +1,20 @@
+/* Hoja alternativa: tema claro */
+:root {
+  color-scheme: light;
+}
+
+body {
+  color: #20252b;
+  background: #f5f2ea;
+}
+
+.site-header {
+  background: rgba(245, 242, 234, 0.96);
+}
+
+.cascade-card,
+.tool-card,
+.outcomes,
+.lesson-index a {
+  background: #fffdf8;
+}

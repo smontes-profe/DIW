@@ -47,7 +47,8 @@ index.html · Diseño de interfaces web
 │   ├── 04 · Tipografía web e iconografía
 │   └── 05 · Arquitectura de la información y mapas de navegación
 └── UT2/index.html · Uso de estilos
-    └── 01 · Tipos de aplicación de estilos CSS
+    ├── 01 · Tipos de aplicación de estilos CSS
+    └── 02 · Conmutación dinámica de temas
 ```
 
 Las páginas agrupadas de cada unidad son las entradas recomendadas. Los archivos `UT1_*.html` se conservan como ejemplos independientes para facilitar el estudio de cada ejercicio por separado.

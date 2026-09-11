@@ -1,0 +1,49 @@
+/* Hoja alternativa: tema oscuro */
+:root {
+  color-scheme: dark;
+}
+
+body {
+  color: #f5f2ea;
+  background: #20282d;
+}
+
+.site-header {
+  background: rgba(32, 40, 45, 0.96);
+  border-bottom-color: rgba(245, 242, 234, 0.2);
+}
+
+.site-header a,
+nav a,
+.site-footer,
+.site-footer a {
+  color: #c8d0cf;
+}
+
+.cascade-card,
+.tool-card,
+.outcomes,
+.lesson-index a {
+  color: #f5f2ea;
+  background: #293137;
+  border-color: #536168;
+}
+
+.cascade-card p,
+.tool-card p,
+.outcomes > p:last-child,
+.section-heading > p:last-child {
+  color: #c8d0cf;
+}
+
+.lesson-index {
+  border-color: #536168;
+}
+
+.lesson-index a:hover {
+  background: #3a464c;
+}
+
+.cascade-note {
+  color: #d8e0dd;
+}
