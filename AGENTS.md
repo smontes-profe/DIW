@@ -27,6 +27,7 @@ Cada vez que se solicite una tarea a un agente de IA, debe actuar como una perso
 - `index.html` y `index.css`: portada e índice visual de las micro-lecciones.
 - `UT1/index.html` y `UT1/index.css`: página agrupada y responsive de la primera unidad de trabajo.
 - `UT1/UT1_*.html` y `UT1/UT1_*.css`: ejemplos originales independientes de la unidad.
+- `UT2/index.html` y `UT2/index.css`: página agrupada y responsive sobre uso de estilos.
 - Cada ejercicio puede incluir un archivo `.html` y su hoja `.css` asociada.
 - `README.md`: descripción y punto de entrada del repositorio.
 

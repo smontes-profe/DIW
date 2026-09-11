@@ -40,15 +40,19 @@ Necesita una estructura estable, enlaces previsibles y páginas independientes q
 
 ```text
 index.html · Diseño de interfaces web
-└── UT1/index.html · Fundamentos del diseño visual e interacción
-    ├── 01 · Punto, línea y forma
-    ├── 02 · Plano, volumen y textura
-    ├── 03 · Distribución y espacio negativo
-    ├── 04 · Tipografía web e iconografía
-    └── 05 · Arquitectura de la información y mapas de navegación
+├── UT1/index.html · Fundamentos del diseño visual e interacción
+│   ├── 01 · Punto, línea y forma
+│   ├── 02 · Plano, volumen y textura
+│   ├── 03 · Distribución y espacio negativo
+│   ├── 04 · Tipografía web e iconografía
+│   └── 05 · Arquitectura de la información y mapas de navegación
+└── UT2/index.html · Uso de estilos
+    ├── Cascada, clases y hojas externas
+    ├── Herramientas y responsive
+    └── Preprocesadores
 ```
 
-La página agrupada de UT1 es la entrada recomendada. Los archivos `UT1_*.html` se conservan como ejemplos independientes para facilitar el estudio de cada ejercicio por separado.
+Las páginas agrupadas de cada unidad son las entradas recomendadas. Los archivos `UT1_*.html` se conservan como ejemplos independientes para facilitar el estudio de cada ejercicio por separado.
 
 ## 4. Recorridos principales
 
