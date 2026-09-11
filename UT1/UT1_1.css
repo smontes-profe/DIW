@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap");
 
 :root {
   --ink: #20252b;
@@ -43,7 +43,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--paper);
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 .page-shell {
@@ -74,7 +74,7 @@ p {
 
 h1,
 h2 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 h1 {
@@ -183,7 +183,7 @@ h2 {
   left: 10%;
   width: 80%;
   height: 5px;
-  content: '';
+  content: "";
   background: var(--teal);
   transform: rotate(-12deg);
   transform-origin: left center;

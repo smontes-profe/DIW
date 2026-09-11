@@ -1,139 +1,159 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Punto, línea y forma</title>
-  <link rel="stylesheet" href="UT1_1.css">
-</head>
-<body>
-  <header class="site-header">
-    <a href="../index.html">DIW · Inicio</a>
-    <a href="index.html">UT1 · Índice de la unidad</a>
-  </header>
-  <main class="page-shell">
-    <header class="intro">
-      <p class="eyebrow">Elementos del diseño visual</p>
-      <h1>Punto, línea y forma</h1>
-      <p class="intro-copy">
-        El punto es el elemento más básico; varios puntos generan líneas y las líneas
-        delimitan formas. En digital, podemos expresarlos con <code>div</code>, SVG y
-        bordes CSS.
-      </p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Punto, línea y forma</title>
+    <link rel="stylesheet" href="UT1_1.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="../index.html">DIW · Inicio</a>
+      <a href="index.html">UT1 · Índice de la unidad</a>
     </header>
+    <main class="page-shell">
+      <header class="intro">
+        <p class="eyebrow">Elementos del diseño visual</p>
+        <h1>Punto, línea y forma</h1>
+        <p class="intro-copy">
+          El punto es el elemento más básico; varios puntos generan líneas y las
+          líneas delimitan formas. En digital, podemos expresarlos con
+          <code>div</code>, SVG y bordes CSS.
+        </p>
+      </header>
 
-    <section class="visual-grid" aria-label="Ejemplos de punto, línea y forma">
-      <article class="lesson-card point-card">
-        <div class="card-heading">
-          <span class="step-number">01</span>
-          <div>
-            <h2>Punto</h2>
-            <p>Un foco visual mínimo</p>
+      <section
+        class="visual-grid"
+        aria-label="Ejemplos de punto, línea y forma"
+      >
+        <article class="lesson-card point-card">
+          <div class="card-heading">
+            <span class="step-number">01</span>
+            <div>
+              <h2>Punto</h2>
+              <p>Un foco visual mínimo</p>
+            </div>
           </div>
-        </div>
-        <div class="demo demo-point" aria-label="Punto creado con un div">
-          <div class="dot"></div>
-        </div>
-        <div class="code-example">
-          <span class="code-label">HTML</span>
-          <pre>&lt;div class="punto"&gt;&lt;/div&gt;</pre>
-          <span class="code-label">CSS</span>
-          <pre>.punto {
+          <div class="demo demo-point" aria-label="Punto creado con un div">
+            <div class="dot"></div>
+          </div>
+          <div class="code-example">
+            <span class="code-label">HTML</span>
+            <pre>&lt;div class="punto"&gt;&lt;/div&gt;</pre>
+            <span class="code-label">CSS</span>
+            <pre>
+.punto {
   width: 40px;
   height: 40px;
   background: coral;
   border-radius: 50%;
 }</pre>
-        </div>
-      </article>
-
-      <article class="lesson-card line-card">
-        <div class="card-heading">
-          <span class="step-number">02</span>
-          <div>
-            <h2>Línea</h2>
-            <p>Dirección y recorrido</p>
           </div>
-        </div>
-        <div class="demo demo-line" aria-label="Línea construida con varios puntos">
-          <div class="linea"></div>
-        </div>
-        <div class="code-example">
-          <span class="code-label">HTML</span>
-          <pre>&lt;div class="linea"&gt;&lt;/div&gt;</pre>
-          <span class="code-label">CSS</span>
-          <pre>.linea {
+        </article>
+
+        <article class="lesson-card line-card">
+          <div class="card-heading">
+            <span class="step-number">02</span>
+            <div>
+              <h2>Línea</h2>
+              <p>Dirección y recorrido</p>
+            </div>
+          </div>
+          <div
+            class="demo demo-line"
+            aria-label="Línea construida con varios puntos"
+          >
+            <div class="linea"></div>
+          </div>
+          <div class="code-example">
+            <span class="code-label">HTML</span>
+            <pre>&lt;div class="linea"&gt;&lt;/div&gt;</pre>
+            <span class="code-label">CSS</span>
+            <pre>
+.linea {
   width: 180px;
   border-top: 4px solid teal;
 }</pre>
-        </div>
-      </article>
-
-      <article class="lesson-card shape-card">
-        <div class="card-heading">
-          <span class="step-number">03</span>
-          <div>
-            <h2>Forma</h2>
-            <p>El contorno organiza el espacio</p>
           </div>
-        </div>
-        <div class="demo demo-shapes" aria-label="Cuadrado, círculo y triángulo">
-          <div class="shape square"></div>
-          <div class="shape circle"></div>
-          <div class="shape triangle"></div>
-        </div>
-        <div class="code-example">
-          <span class="code-label">HTML</span>
-          <pre>&lt;div class="circulo"&gt;&lt;/div&gt;</pre>
-          <span class="code-label">CSS</span>
-          <pre>.circulo {
+        </article>
+
+        <article class="lesson-card shape-card">
+          <div class="card-heading">
+            <span class="step-number">03</span>
+            <div>
+              <h2>Forma</h2>
+              <p>El contorno organiza el espacio</p>
+            </div>
+          </div>
+          <div
+            class="demo demo-shapes"
+            aria-label="Cuadrado, círculo y triángulo"
+          >
+            <div class="shape square"></div>
+            <div class="shape circle"></div>
+            <div class="shape triangle"></div>
+          </div>
+          <div class="code-example">
+            <span class="code-label">HTML</span>
+            <pre>&lt;div class="circulo"&gt;&lt;/div&gt;</pre>
+            <span class="code-label">CSS</span>
+            <pre>
+.circulo {
   width: 60px;
   height: 60px;
   border: 3px solid goldenrod;
   border-radius: 50%;
 }</pre>
-          <span class="code-label">Otras formas</span>
-          <pre>.cuadrado { border: 3px solid goldenrod; }
+            <span class="code-label">Otras formas</span>
+            <pre>
+.cuadrado { border: 3px solid goldenrod; }
 .triangulo {
   border-bottom: 60px solid goldenrod;
   border-left: 35px solid transparent;
   border-right: 35px solid transparent;
 }</pre>
-        </div>
-      </article>
-    </section>
+          </div>
+        </article>
+      </section>
 
-    <section class="svg-section" aria-labelledby="svg-title">
-      <div>
-        <p class="eyebrow">El mismo lenguaje, otra herramienta</p>
-        <h2 id="svg-title">Una forma también puede dibujarse con SVG</h2>
-        <p>
-          SVG permite describir la geometría con elementos como <code>circle</code> y
-          <code>line</code>. Este es un ejemplo mínimo y visible.
-        </p>
-        <div class="code-example svg-code">
-          <span class="code-label">SVG</span>
-          <pre>&lt;svg width="180" height="100"&gt;
+      <section class="svg-section" aria-labelledby="svg-title">
+        <div>
+          <p class="eyebrow">El mismo lenguaje, otra herramienta</p>
+          <h2 id="svg-title">Una forma también puede dibujarse con SVG</h2>
+          <p>
+            SVG permite describir la geometría con elementos como
+            <code>circle</code> y <code>line</code>. Este es un ejemplo mínimo y
+            visible.
+          </p>
+          <div class="code-example svg-code">
+            <span class="code-label">SVG</span>
+            <pre>
+&lt;svg width="180" height="100"&gt;
   &lt;circle cx="50" cy="50" r="20" /&gt;
   &lt;line x1="90" y1="50"
         x2="170" y2="50" /&gt;
 &lt;/svg&gt;</pre>
+          </div>
         </div>
-      </div>
-      <svg class="visual-svg" viewBox="0 0 360 180" role="img" aria-label="Composición SVG con puntos, líneas y formas">
-        <line x1="30" y1="145" x2="330" y2="35" class="svg-line" />
-        <circle cx="30" cy="145" r="8" class="svg-point" />
-        <circle cx="330" cy="35" r="8" class="svg-point" />
-        <rect x="116" y="54" width="74" height="74" class="svg-square" />
-        <circle cx="247" cy="99" r="37" class="svg-circle" />
-        <polygon points="66,43 101,105 31,105" class="svg-triangle" />
-      </svg>
-    </section>
+        <svg
+          class="visual-svg"
+          viewBox="0 0 360 180"
+          role="img"
+          aria-label="Composición SVG con puntos, líneas y formas"
+        >
+          <line x1="30" y1="145" x2="330" y2="35" class="svg-line" />
+          <circle cx="30" cy="145" r="8" class="svg-point" />
+          <circle cx="330" cy="35" r="8" class="svg-point" />
+          <rect x="116" y="54" width="74" height="74" class="svg-square" />
+          <circle cx="247" cy="99" r="37" class="svg-circle" />
+          <polygon points="66,43 101,105 31,105" class="svg-triangle" />
+        </svg>
+      </section>
 
-    <footer>
-      <span class="footer-mark"></span>
-      <p>Estabilidad · dinamismo · tensión</p>
-    </footer>
-  </main>
-</body>
+      <footer>
+        <span class="footer-mark"></span>
+        <p>Estabilidad · dinamismo · tensión</p>
+      </footer>
+    </main>
+  </body>
 </html>

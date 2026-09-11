@@ -1,70 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plano, volumen y textura</title>
-  <link rel="stylesheet" href="UT1_2.css">
-</head>
-<body>
-  <header class="site-header">
-    <a href="../index.html">DIW · Inicio</a>
-    <a href="index.html">UT1 · Índice de la unidad</a>
-  </header>
-  <main class="pagina">
-    <header class="cabecera">
-      <p class="etiqueta">Elementos del diseño visual · 02</p>
-      <h1>Plano, volumen<br>y textura</h1>
-      <p class="introduccion">
-        El plano organiza el espacio, el volumen crea sensación de profundidad y la
-        textura aporta riqueza visual.
-      </p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plano, volumen y textura</title>
+    <link rel="stylesheet" href="UT1_2.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="../index.html">DIW · Inicio</a>
+      <a href="index.html">UT1 · Índice de la unidad</a>
     </header>
+    <main class="pagina">
+      <header class="cabecera">
+        <p class="etiqueta">Elementos del diseño visual · 02</p>
+        <h1>Plano, volumen<br />y textura</h1>
+        <p class="introduccion">
+          El plano organiza el espacio, el volumen crea sensación de profundidad
+          y la textura aporta riqueza visual.
+        </p>
+      </header>
 
-    <section class="ejemplos" aria-label="Ejemplos de plano, volumen y textura">
-      <article class="tarjeta tarjeta-plano">
-        <div class="titulo-tarjeta">
-          <span>01</span>
-          <div>
-            <h2>Plano</h2>
-            <p>Una superficie que organiza</p>
+      <section
+        class="ejemplos"
+        aria-label="Ejemplos de plano, volumen y textura"
+      >
+        <article class="tarjeta tarjeta-plano">
+          <div class="titulo-tarjeta">
+            <span>01</span>
+            <div>
+              <h2>Plano</h2>
+              <p>Una superficie que organiza</p>
+            </div>
           </div>
-        </div>
 
-        <div class="muestra muestra-plano" aria-label="Un plano rectangular">
-          <div class="plano"></div>
-        </div>
+          <div class="muestra muestra-plano" aria-label="Un plano rectangular">
+            <div class="plano"></div>
+          </div>
 
-        <div class="codigo">
-          <strong>HTML</strong>
-          <pre>&lt;div class="plano"&gt;&lt;/div&gt;</pre>
-          <strong>CSS</strong>
-          <pre>.plano {
+          <div class="codigo">
+            <strong>HTML</strong>
+            <pre>&lt;div class="plano"&gt;&lt;/div&gt;</pre>
+            <strong>CSS</strong>
+            <pre>
+.plano {
   width: 180px;
   height: 100px;
   background: steelblue;
 }</pre>
-        </div>
-      </article>
-
-      <article class="tarjeta tarjeta-volumen">
-        <div class="titulo-tarjeta">
-          <span>02</span>
-          <div>
-            <h2>Volumen</h2>
-            <p>Profundidad simulada</p>
           </div>
-        </div>
+        </article>
 
-        <div class="muestra muestra-volumen" aria-label="Un cubo con volumen simulado">
-          <div class="cubo"></div>
-        </div>
+        <article class="tarjeta tarjeta-volumen">
+          <div class="titulo-tarjeta">
+            <span>02</span>
+            <div>
+              <h2>Volumen</h2>
+              <p>Profundidad simulada</p>
+            </div>
+          </div>
 
-        <div class="codigo">
-          <strong>HTML</strong>
-          <pre>&lt;div class="cubo"&gt;&lt;/div&gt;</pre>
-          <strong>CSS</strong>
-          <pre>.cubo {
+          <div
+            class="muestra muestra-volumen"
+            aria-label="Un cubo con volumen simulado"
+          >
+            <div class="cubo"></div>
+          </div>
+
+          <div class="codigo">
+            <strong>HTML</strong>
+            <pre>&lt;div class="cubo"&gt;&lt;/div&gt;</pre>
+            <strong>CSS</strong>
+            <pre>
+.cubo {
   width: 90px;
   height: 90px;
   background: linear-gradient(135deg,
@@ -73,27 +81,31 @@
   transform: perspective(300px)
     rotateX(8deg) rotateY(-12deg);
 }</pre>
-        </div>
-      </article>
-
-      <article class="tarjeta tarjeta-textura">
-        <div class="titulo-tarjeta">
-          <span>03</span>
-          <div>
-            <h2>Textura</h2>
-            <p>Profundidad visual</p>
           </div>
-        </div>
+        </article>
 
-        <div class="muestra muestra-textura" aria-label="Una superficie con textura de puntos">
-          <div class="textura"></div>
-        </div>
+        <article class="tarjeta tarjeta-textura">
+          <div class="titulo-tarjeta">
+            <span>03</span>
+            <div>
+              <h2>Textura</h2>
+              <p>Profundidad visual</p>
+            </div>
+          </div>
 
-        <div class="codigo">
-          <strong>HTML</strong>
-          <pre>&lt;div class="textura"&gt;&lt;/div&gt;</pre>
-          <strong>CSS</strong>
-          <pre>.textura {
+          <div
+            class="muestra muestra-textura"
+            aria-label="Una superficie con textura de puntos"
+          >
+            <div class="textura"></div>
+          </div>
+
+          <div class="codigo">
+            <strong>HTML</strong>
+            <pre>&lt;div class="textura"&gt;&lt;/div&gt;</pre>
+            <strong>CSS</strong>
+            <pre>
+.textura {
   width: 180px;
   height: 100px;
   background-color: #eab84b;
@@ -101,26 +113,28 @@
     #9b7411 1px, transparent 1px);
   background-size: 10px 10px;
 }</pre>
+          </div>
+        </article>
+      </section>
+
+      <section class="resumen" aria-labelledby="resumen-titulo">
+        <div>
+          <p class="etiqueta">Idea clave</p>
+          <h2 id="resumen-titulo">
+            De una superficie plana a una sensación de profundidad
+          </h2>
         </div>
-      </article>
-    </section>
+        <div class="secuencia" aria-label="Plano, sombra y textura">
+          <span class="secuencia-plano"></span>
+          <span class="secuencia-sombra"></span>
+          <span class="secuencia-textura"></span>
+        </div>
+      </section>
 
-    <section class="resumen" aria-labelledby="resumen-titulo">
-      <div>
-        <p class="etiqueta">Idea clave</p>
-        <h2 id="resumen-titulo">De una superficie plana a una sensación de profundidad</h2>
-      </div>
-      <div class="secuencia" aria-label="Plano, sombra y textura">
-        <span class="secuencia-plano"></span>
-        <span class="secuencia-sombra"></span>
-        <span class="secuencia-textura"></span>
-      </div>
-    </section>
-
-    <footer>
-      <span class="punto-footer"></span>
-      <p>Plano · volumen · textura</p>
-    </footer>
-  </main>
-</body>
+      <footer>
+        <span class="punto-footer"></span>
+        <p>Plano · volumen · textura</p>
+      </footer>
+    </main>
+  </body>
 </html>
