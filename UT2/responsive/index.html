@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Landing page responsive de Zelda Ocarina of Time remake con Bootstrap."
+    />
+    <title>Zelda: Ocarina of Time remake</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#top" aria-label="Zelda Ocarina of Time inicio">
+          <span class="brand-mark" aria-hidden="true">Z</span>
+          Zelda: Ocarina of Time
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="#top">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#historia">Historia</a></li>
+            <li class="nav-item"><a class="nav-link" href="#lugares">Lugares</a></li>
+            <li class="nav-item"><a class="nav-link" href="#personajes">Personajes</a></li>
+            <li class="nav-item"><a class="nav-link btn btn-outline-light ms-lg-3" href="#reserva">Reservar</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main id="top">
+      <section class="hero-section">
+        <div class="container">
+          <div class="row align-items-center g-5 py-5">
+            <div class="col-lg-6 text-white">
+              <p class="eyebrow mb-3">Remake fan-made · aventura épica</p>
+              <h1 class="display-4 fw-bold mb-3">Vuelve a Hyrule con una nueva mirada.</h1>
+              <p class="lead mb-4">
+                Una versión remasterizada de la aventura de Link, con paisajes más vivos,
+                historia más profunda y un diseño pensado para una experiencia más inmersiva.
+              </p>
+              <div class="d-flex flex-wrap gap-3">
+                <a class="btn btn-primary btn-lg px-4" href="#lugares">Explorar mundo</a>
+                <a class="btn btn-outline-light btn-lg px-4" href="#historia">Leer la historia</a>
+              </div>
+              <ul class="list-unstyled d-flex flex-wrap gap-4 mt-4 mb-0 small text-light">
+                <li><i class="bi bi-shield-fill-check me-2"></i>Exploración libre</li>
+                <li><i class="bi bi-map me-2"></i>Hyrule detallado</li>
+                <li><i class="bi bi-music-note-beamed me-2"></i>Melodías legendarias</li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <div class="hero-card shadow-lg">
+                <img
+                  src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1200&q=80"
+                  alt="Paisaje fantástico de un reino medieval con bosque, montañas y una luna brillante"
+                />
+                <div class="hero-badge">
+                  <span class="badge-title">Nueva edición</span>
+                  <strong>Hyrule Awakens</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5 feature-section">
+        <div class="container">
+          <div class="row g-4 text-center">
+            <div class="col-md-4">
+              <div class="feature-box h-100">
+                <div class="feature-icon" aria-hidden="true"><i class="bi bi-compass"></i></div>
+                <h2>Exploración</h2>
+                <p>Descubre templos, bosques, bosques y rutas ocultas con un mapa más claro y una navegación más intuitive.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="feature-box h-100">
+                <div class="feature-icon" aria-hidden="true"><i class="bi bi-sword"></i></div>
+                <h2>Combate</h2>
+                <p>Combates más ágiles, enemigos con patrones más ricos y una sensación de progreso que guía cada encuentro.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="feature-box h-100">
+                <div class="feature-icon" aria-hidden="true"><i class="bi bi-music-note-list"></i></div>
+                <h2>Sonido</h2>
+                <p>Las melodías icónicas se reimaginan con una mezcla más inmersiva y un uso más expresivo del espacio sonoro.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="lugares" class="py-5 places-section">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-end gap-3 flex-wrap mb-4">
+            <div>
+              <p class="eyebrow text-uppercase mb-2">Lugares clave</p>
+              <h2 class="section-title mb-0">Explora Hyrule como nunca antes.</h2>
+            </div>
+            <a class="btn btn-outline-primary" href="#reserva">Reservar ahora</a>
+          </div>
+
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <article class="col">
+              <div class="card h-100 shadow-sm border-0">
+                <img
+                  src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80"
+                  class="card-img-top"
+                  alt="Bosque de Hyrule con árboles y un río"
+                />
+                <div class="card-body">
+                  <span class="card-kicker">Bosque</span>
+                  <h3 class="card-title">Bosque Kokiri</h3>
+                  <p class="card-text">Un paraíso de adelfas, senderos ocultos y recuerdos de la infancia de Link.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card h-100 shadow-sm border-0">
+                <img
+                  src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80"
+                  class="card-img-top"
+                  alt="Montañas con un lago y un cielo dorado"
+                />
+                <div class="card-body">
+                  <span class="card-kicker">Montaña</span>
+                  <h3 class="card-title">Monte del templo</h3>
+                  <p class="card-text">Una ruta elevada con retos físicos y una vista que prepara la gran aventura.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card h-100 shadow-sm border-0">
+                <img
+                  src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
+                  class="card-img-top"
+                  alt="Desierto con dunas y una puesta de sol dorada"
+                />
+                <div class="card-body">
+                  <span class="card-kicker">Desierto</span>
+                  <h3 class="card-title">Puerta del desierto</h3>
+                  <p class="card-text">Un paisaje seco, desafiante y lleno de misterios que exigen paciencia y estrategia.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card h-100 shadow-sm border-0">
+                <img
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80"
+                  class="card-img-top"
+                  alt="Paisaje de montaña con lago y bosque"
+                />
+                <div class="card-body">
+                  <span class="card-kicker">Templo</span>
+                  <h3 class="card-title">Castillo de Ganon</h3>
+                  <p class="card-text">El punto culminante de la aventura, donde la trama y la emoción se convierten en una sola fuerza.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="historia" class="py-5 story-section">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-5">
+              <p class="eyebrow text-uppercase mb-2">Historia</p>
+              <h2 class="section-title">Una leyenda que se reinterpreta.</h2>
+              <p>
+                Cuando la historia de Link se reescribe con un nuevo pulso visual, el viaje por Hyrule conserva
+                su esencia pero aporta más claridad, más detalle y una sensación más envolvente.
+              </p>
+              <p>
+                El remake combina el legado del original con una composición más moderna, para que el recorrido
+                siga siendo reconocible pero se sienta más cercano y emocionante para una nueva generación.
+              </p>
+            </div>
+            <div class="col-lg-7">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="info-panel h-100">
+                    <span class="info-label">Etapa 01</span>
+                    <h3>La llamada del bosque</h3>
+                    <p>Link despierta en un mundo que necesita valentía, memoria y una promesa aún por cumplir.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="info-panel h-100">
+                    <span class="info-label">Etapa 02</span>
+                    <h3>El viaje de la luz</h3>
+                    <p>El héroe explora nuevas rutas, aprende tiempos y descubre el pulso de la tierra de Hyrule.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="info-panel h-100">
+                    <span class="info-label">Etapa 03</span>
+                    <h3>El reino en riesgo</h3>
+                    <p>La historia se intensifica y cada decisión del jugador afecta la sensación de tensión y progresión.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="info-panel h-100">
+                    <span class="info-label">Etapa 04</span>
+                    <h3>La leyenda final</h3>
+                    <p>La última confrontación une memoria, valor y un equilibrio que vuelve a poner el mundo en orden.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="personajes" class="py-5 characters-section">
+        <div class="container">
+          <div class="text-center mb-4">
+            <p class="eyebrow text-uppercase mb-2">Personajes</p>
+            <h2 class="section-title">Aliados y enemigos del reino.</h2>
+          </div>
+          <div class="row g-4 justify-content-center">
+            <div class="col-sm-6 col-lg-3">
+              <div class="character-card text-center h-100">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" alt="Retrato de una joven con luz cálida y expresión tranquila" />
+                <h3>Zelda</h3>
+                <p>Guía espiritual del reino y símbolo de la sabiduría que empuja a Link a defender el futuro.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="character-card text-center h-100">
+                <img src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=800&q=80" alt="Retrato de un joven con ropa atrevida en un entorno de aventura" />
+                <h3>Link</h3>
+                <p>Héroe de la leyenda, valiente y decidido, listo para reencontrarse con su destino en Hyrule.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="character-card text-center h-100">
+                <img src="https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=800&q=80" alt="Joven con apariencia arcana, mirando al futuro en un bosque" />
+                <h3>Navi</h3>
+                <p>Un guía inquieto, valioso para cada paso del viaje y para entender cada peligro del mundo.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="character-card text-center h-100">
+                <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=800&q=80" alt="Silueta de un personaje misterioso con luz oscura y dramática" />
+                <h3>Ganon</h3>
+                <p>La amenaza final, una fuerza de poder desmedido que intenta romper el equilibrio del reino.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="reserva" class="cta-section py-5">
+        <div class="container">
+          <div class="cta-box text-center text-white">
+            <p class="eyebrow text-uppercase mb-2">Adelántate al lanzamiento</p>
+            <h2 class="section-title mb-3">Únete a la aventura antes de que el reino despierte.</h2>
+            <a class="btn btn-light btn-lg px-4" href="mailto:reservas@example.com">Solicitar acceso anticipado</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer text-light">
+      <div class="container py-5">
+        <div class="row g-4 align-items-start">
+          <div class="col-md-5">
+            <h3 class="footer-brand">Zelda: Ocarina of Time</h3>
+            <p class="mb-0 text-secondary">
+              Un ejemplo de landing page responsive con Bootstrap para ilustrar maquetación, navegación y estructura de contenido.
+            </p>
+          </div>
+          <div class="col-md-3">
+            <h4>Explora</h4>
+            <ul class="list-unstyled mb-0 text-secondary">
+              <li><a href="#historia">Historia</a></li>
+              <li><a href="#lugares">Lugares</a></li>
+              <li><a href="#personajes">Personajes</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4>Creditos</h4>
+            <p class="mb-0 text-secondary small">
+              Imágenes procedentes de <a href="https://unsplash.com/" target="_blank" rel="noreferrer">Unsplash</a>.
+              El universo de Zelda es propiedad de Nintendo; este ejemplo es un ejercicio educativo y de fan art.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
