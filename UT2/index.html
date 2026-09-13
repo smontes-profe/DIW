@@ -63,8 +63,9 @@
         >
         <a href="#temas"><span>02</span> Conmutación dinámica de temas</a>
         <a href="#bootstrap-landing"><span>03</span> Landing page con Bootstrap</a>
-        <a href="#selectores"><span>04</span> Selectores CSS</a>
-        <a href="#modelo-caja"><span>05</span> Modelo de caja</a>
+        <a href="#scss-demo"><span>04</span> Sass: mixins y funciones</a>
+        <a href="#selectores"><span>05</span> Selectores CSS</a>
+        <a href="#modelo-caja"><span>06</span> Modelo de caja</a>
       </nav>
 
       <section
@@ -225,6 +226,49 @@
               <span></span>
               <span></span>
               <span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="lesson-section scss-demo-section"
+        id="scss-demo"
+        aria-labelledby="titulo-scss"
+      >
+        <div class="section-heading">
+          <p class="lesson-number">Bloque 04</p>
+          <h2 id="titulo-scss">Sass muy sencillo: mixins y funciones</h2>
+          <p>
+            Este ejemplo muestra una forma mínima de usar SCSS para reutilizar
+            estilos, calcular tamaños y ajustar tonos de color sin repetir
+            código en cada selector.
+          </p>
+        </div>
+        <div class="scss-demo-card">
+          <div class="scss-demo-copy">
+            <p>
+              Aquí se usan un mixin para la base de tarjetas, una función para
+              valores de espaciado y funciones nativas como <strong>lighten()</strong>
+              para variar colores de forma clara y mantenible.
+            </p>
+            <a href="scss/index.html" class="demo-link scss-link"
+              >Abrir ejemplo SCSS</a
+            >
+          </div>
+          <div class="scss-demo-preview" aria-label="Vista previa del ejemplo SCSS">
+            <div class="scss-preview-top">
+              <span class="scss-chip">Mixin</span>
+              <span class="scss-chip alt">Función</span>
+            </div>
+            <div class="scss-preview-boxes">
+              <span class="scss-box"></span>
+              <span class="scss-box highlight"></span>
+              <span class="scss-box dark"></span>
+            </div>
+            <div class="scss-preview-footer">
+              <strong>card-base()</strong>
+              <small>spacing()</small>
             </div>
           </div>
         </div>

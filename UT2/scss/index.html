@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UT2 · SCSS</title>
+    <meta
+      name="description"
+      content="Ejemplo sencillo de SCSS con mixins, funciones y funciones nativas."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="demo-page">
+      <header class="demo-header">
+        <p class="eyebrow">UT2 · Sass</p>
+        <h1>Ejemplo sencillo con mixins y funciones</h1>
+        <p>
+          Una página minimalista para ver cómo SCSS nos ayuda a reutilizar
+          estilos y a generar valores de forma más clara y mantenible.
+        </p>
+      </header>
+
+      <section class="demo-grid" aria-label="Tres tarjetas de ejemplo">
+        <article class="card card--primary">
+          <span class="card-tag">Mixin</span>
+          <h2>Tarjeta base</h2>
+          <p>
+            El mixin reutiliza la misma forma para crear cajas con sombra,
+            radio y espaciado homogéneo.
+          </p>
+        </article>
+
+        <article class="card card--secondary">
+          <span class="card-tag">Función</span>
+          <h2>Espaciado</h2>
+          <p>
+            La función spacing() calcula tamaños de separación con Sass y evita
+            repetir valores mágicos.
+          </p>
+        </article>
+
+        <article class="card card--accent">
+          <span class="card-tag">Native</span>
+          <h2>Color</h2>
+          <p>
+            lighten(), darken() y adjust-color() permiten variar tonos sin crear
+            manualmente nuevas paletas.
+          </p>
+        </article>
+      </section>
+
+      <section class="info-panel" aria-labelledby="sass-uses-title">
+        <h2 id="sass-uses-title">Qué estamos usando</h2>
+        <ul>
+          <li>@mixin para reutilizar estilos de botones y tarjetas.</li>
+          <li>@function para calcular espacios con sass:math.</li>
+          <li>lighten(), darken() y adjust-color() como funciones nativas.</li>
+        </ul>
+        <button type="button" class="demo-button">¡Probar!</button>
+      </section>
+    </main>
+  </body>
+</html>

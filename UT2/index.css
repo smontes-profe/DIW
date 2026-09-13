@@ -425,6 +425,12 @@ h2 {
 .demo-link:hover {
   background: #137f74;
 }
+.scss-link {
+  background: #2f6f5c;
+}
+.scss-link:hover {
+  background: #245946;
+}
 .bootstrap-demo-preview {
   display: grid;
   gap: 12px;
@@ -498,6 +504,79 @@ h2 {
   height: 92px;
   background: linear-gradient(145deg, #ebf0f5, #dfe8d7);
   border-radius: 12px;
+}
+.scss-demo-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  align-items: center;
+  padding: 28px;
+  background: linear-gradient(135deg, rgba(47, 111, 92, 0.06), rgba(207, 106, 77, 0.08));
+  border: 1px solid var(--line);
+}
+.scss-demo-copy {
+  display: grid;
+  gap: 18px;
+  align-content: center;
+}
+.scss-demo-copy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.scss-demo-preview {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.scss-preview-top {
+  display: flex;
+  gap: 10px;
+}
+.scss-chip {
+  display: inline-block;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(47, 111, 92, 0.12);
+  color: #1a4f3d;
+  font: 700 0.7rem Consolas, monospace;
+}
+.scss-chip.alt {
+  background: rgba(207, 106, 77, 0.14);
+  color: #8c472f;
+}
+.scss-preview-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.scss-box {
+  display: block;
+  height: 110px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ebf5ea, #d8e0d1);
+  border: 1px solid rgba(32, 37, 43, 0.08);
+}
+.scss-box.highlight {
+  background: linear-gradient(135deg, #eef4f2, #cfe4dc);
+}
+.scss-box.dark {
+  background: linear-gradient(135deg, #d8e3e9, #b6c9cf);
+}
+.scss-preview-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.scss-preview-footer strong {
+  color: var(--ink);
+  font-family: "Space Grotesk", sans-serif;
 }
 .selector-grid {
   display: grid;
@@ -921,7 +1000,8 @@ pre {
   .theme-demo {
     grid-template-columns: 1fr;
   }
-  .bootstrap-demo-card {
+  .bootstrap-demo-card,
+  .scss-demo-card {
     grid-template-columns: 1fr;
   }
   .box-model-layout { grid-template-columns: 1fr; }
