@@ -51,8 +51,49 @@ img {
   font-weight: 600;
 }
 
-.nav-link.btn-outline-light {
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus-visible {
+  color: var(--brand-gold);
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #ffffff;
+}
+
+/* Botón 'Reservar' en el navbar con alto contraste en reposo, hover, foco y seleccionado */
+.navbar-dark .navbar-nav .nav-link.btn-outline-light {
   border-width: 2px;
+  border-color: rgba(255, 255, 255, 0.85);
+  color: #ffffff !important;
+  background-color: transparent;
+  padding: 0.45rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+
+.navbar-dark .navbar-nav .nav-link.btn-outline-light:hover,
+.navbar-dark .navbar-nav .nav-link.btn-outline-light:focus {
+  color: var(--brand-ink) !important;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link.btn-outline-light:active,
+.navbar-dark .navbar-nav .nav-link.btn-outline-light.active {
+  color: var(--brand-ink) !important;
+  background-color: var(--brand-gold);
+  border-color: var(--brand-gold);
+}
+
+.navbar-dark .navbar-nav .nav-link.btn-outline-light:focus-visible {
+  outline: 2px solid var(--brand-gold);
+  outline-offset: 3px;
+  box-shadow: none;
 }
 
 .hero-section {
@@ -61,11 +102,53 @@ img {
     url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
 }
 
+/* Eyebrows: color oscuro en secciones claras para garantizar contraste, y dorado en fondos oscuros */
 .eyebrow {
-  color: var(--brand-gold);
+  color: var(--brand-forest);
   font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0.18em;
+}
+
+.hero-section .eyebrow,
+.cta-box .eyebrow {
+  color: var(--brand-gold);
+}
+
+/* Botones principales con contraste y paleta de la marca */
+.hero-section .btn-primary {
+  background-color: var(--brand-gold);
+  border-color: var(--brand-gold);
+  color: var(--brand-ink);
+  font-weight: 700;
+}
+
+.hero-section .btn-primary:hover,
+.hero-section .btn-primary:focus-visible {
+  background-color: #dfb552;
+  border-color: #dfb552;
+  color: var(--brand-ink);
+}
+
+.hero-section .btn-outline-light {
+  border-width: 2px;
+  font-weight: 600;
+}
+
+.places-section .btn-outline-primary {
+  color: var(--brand-forest);
+  border-color: var(--brand-forest);
+  border-width: 2px;
+  font-weight: 600;
+}
+
+.places-section .btn-outline-primary:hover,
+.places-section .btn-outline-primary:focus-visible,
+.places-section .btn-outline-primary:active,
+.places-section .btn-outline-primary.active {
+  background-color: var(--brand-forest);
+  border-color: var(--brand-forest);
+  color: #ffffff;
 }
 
 .hero-section h1 {
@@ -236,19 +319,45 @@ img {
   font-size: 1.1rem;
 }
 
+/* En el footer oscuro, text-secondary de Bootstrap (#6c757d) no alcanzaba 4.5:1. Usamos #a4bad0 (ratio 8.45:1) */
+.site-footer .text-secondary {
+  color: #a4bad0 !important;
+}
+
 .site-footer a {
-  color: #dfeaf2;
-  text-decoration: none;
+  color: var(--brand-sky);
+  text-decoration: underline;
+  text-decoration-color: rgba(223, 234, 242, 0.4);
+  text-underline-offset: 3px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 .site-footer a:hover,
 .site-footer a:focus-visible {
   color: var(--brand-gold);
+  text-decoration-color: var(--brand-gold);
+}
+
+/* Indicadores de foco visibles para accesibilidad por teclado (WCAG 2.4.7 / 2.4.11) */
+:focus-visible {
+  outline: 2px solid var(--brand-gold);
+  outline-offset: 2px;
+}
+
+.places-section :focus-visible,
+.story-section :focus-visible,
+.characters-section :focus-visible {
+  outline-color: var(--brand-forest);
 }
 
 @media (max-width: 991.98px) {
   .hero-card img {
     height: 420px;
+  }
+
+  .navbar-dark .navbar-nav .nav-link.btn-outline-light {
+    margin-top: 0.5rem;
+    display: inline-block;
   }
 }
 
