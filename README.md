@@ -14,6 +14,7 @@ Cada ejemplo relaciona el código fuente con su representación visual para apoy
 - [Portada](index.html): índice visual de las micro-lecciones.
 - [UT1](UT1/index.html): unidad agrupada sobre fundamentos del diseño visual e interacción, incluyendo elementos visuales, distribución, tipografía web e iconografía.
 - [UT2](UT2/index.html): contenidos sobre aplicación de estilos CSS, conmutación dinámica de temas, selectores y modelo de caja.
+- [UT3](UT3/index.html): unidad sobre archivos multimedia, integración de etiquetas `<audio>` y `<video>`, subtítulos accesibles con `<track>` y reproductores adaptables con CSS.
 - [Documento de diseño](DESIGN-DOCUMENT.md): objetivos, arquitectura, sistema visual, accesibilidad y decisiones de implementación de la web.
 
 ## Cómo consultar los ejemplos

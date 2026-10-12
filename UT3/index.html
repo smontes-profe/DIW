@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="UT3: Inclusión de elementos multimedia en interfaces web. Ejemplos prácticos y accesibles de audio y vídeo con HTML5 y CSS."
+    />
+    <title>UT3 · Archivos multimedia</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          class="brand"
+          href="../index.html"
+          aria-label="Diseño de interfaces web, inicio"
+        >
+          <span class="brand-mark" aria-hidden="true">
+            <i></i><i></i><i></i>
+          </span>
+          <span>DIW<span class="brand-dot">.</span></span>
+        </a>
+        <nav aria-label="Navegación de la unidad">
+          <a href="../index.html">Inicio</a>
+          <a href="#etiqueta-audio">Audio</a>
+          <a href="#etiqueta-video">Vídeo</a>
+          <a href="#accesibilidad-multimedia">Accesibilidad</a>
+          <a href="#video-responsive">Responsive</a>
+          <a href="#buenas-practicas">Buenas prácticas</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="unit-hero" aria-labelledby="titulo-unidad">
+        <p class="eyebrow">Unidad de trabajo 03 · Archivos multimedia</p>
+        <h1 id="titulo-unidad">Inclusión de audio<br />y vídeo en la web.</h1>
+        <p>
+          HTML5 introdujo las etiquetas nativas <code>&lt;audio&gt;</code> y
+          <code>&lt;video&gt;</code>, eliminando la dependencia histórica de
+          complementos propietarios. Aprende a estructurar reproductores
+          accesibles, adaptables y respetuosos con la experiencia de usuario.
+        </p>
+      </section>
+
+      <nav class="lesson-index" aria-label="Índice de contenidos de UT3">
+        <a href="#etiqueta-audio">
+          <span>01</span> Etiqueta &lt;audio&gt; y atributos de control
+        </a>
+        <a href="#etiqueta-video">
+          <span>02</span> Etiqueta &lt;video&gt; y carátula poster
+        </a>
+        <a href="#accesibilidad-multimedia">
+          <span>03</span> Accesibilidad: pistas y subtítulos &lt;track&gt;
+        </a>
+        <a href="#video-responsive">
+          <span>04</span> Reproductores adaptables y fluidos con CSS
+        </a>
+        <a href="#buenas-practicas">
+          <span>05</span> Formatos web y pautas de usabilidad
+        </a>
+      </nav>
+
+      <!-- BLOQUE 01: AUDIO -->
+      <section
+        class="lesson-section"
+        id="etiqueta-audio"
+        aria-labelledby="titulo-audio"
+      >
+        <div class="section-heading">
+          <p class="lesson-number">Bloque 01</p>
+          <h2 id="titulo-audio">Etiqueta &lt;audio&gt; y atributos</h2>
+          <p>
+            Permite integrar sonido en la interfaz de forma nativa. Debe
+            incorporar siempre controles visibles y ofrecer formatos alternativos
+            para garantizar compatibilidad entre navegadores.
+          </p>
+        </div>
+
+        <div class="media-demo-grid">
+          <article class="media-card media-card-teal">
+            <div class="card-header-badge">
+              <span class="badge-tag">Demostración en vivo</span>
+              <span class="badge-format">MP3 / WAV</span>
+            </div>
+            <h3>Reproductor de audio estándar</h3>
+            <p>
+              Prueba la reproducción local del archivo. Observa los controles
+              nativos del navegador: reproducción, barra de progreso y volumen.
+            </p>
+
+            <div class="player-container audio-player-box">
+              <div class="player-meta">
+                <span class="player-icon" aria-hidden="true">♪</span>
+                <div>
+                  <strong>Demostración sonora (Acorde C Mayor)</strong>
+                  <small>audio-ejemplo.mp3 · audio-ejemplo.wav</small>
+                </div>
+              </div>
+              <audio controls preload="metadata" class="full-width-audio">
+                <source src="media/audio-ejemplo.mp3" type="audio/mpeg" />
+                <source src="media/audio-ejemplo.wav" type="audio/wav" />
+                Tu navegador no soporta la reproducción de audio HTML5.
+              </audio>
+            </div>
+
+            <div class="code-wrapper">
+              <span class="code-label">Código HTML5</span>
+              <pre><code>&lt;audio controls preload="metadata"&gt;
+  &lt;source src="media/audio-ejemplo.mp3" type="audio/mpeg"&gt;
+  &lt;source src="media/audio-ejemplo.wav" type="audio/wav"&gt;
+  Tu navegador no soporta el elemento de audio.
+&lt;/audio&gt;</code></pre>
+            </div>
+          </article>
+
+          <article class="media-card media-card-coral">
+            <div class="card-header-badge">
+              <span class="badge-tag">Referencia técnica</span>
+              <span class="badge-format">Atributos clave</span>
+            </div>
+            <h3>Atributos principales de &lt;audio&gt;</h3>
+            <ul class="attribute-list">
+              <li>
+                <code>controls</code>
+                <span
+                  >Muestra la interfaz nativa del navegador (play/pause, volumen
+                  y tiempo). Imprescindible para el usuario.</span
+                >
+              </li>
+              <li>
+                <code>preload</code>
+                <span
+                  >Define la estrategia de precarga: <code>none</code> (ahorra
+                  datos), <code>metadata</code> (solo duración y peso) o
+                  <code>auto</code>.</span
+                >
+              </li>
+              <li>
+                <code>loop</code>
+                <span
+                  >Reinicia la reproducción indefinidamente al terminar la
+                  pista.</span
+                >
+              </li>
+              <li>
+                <code>muted</code>
+                <span>Inicia la reproducción con el sonido silenciado.</span>
+              </li>
+              <li>
+                <code>autoplay</code>
+                <span
+                  >Inicia el audio automáticamente. <strong>Evitar en producción</strong>:
+                  deteriora la accesibilidad y los navegadores modernos lo bloquean
+                  salvo que esté silenciado.</span
+                >
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="ra-note">
+          <strong>RA3 · a</strong
+          ><span
+            >Identificar las etiquetas de inclusión de contenidos multimedia y
+            sus atributos de configuración en documentos HTML5.</span
+          >
+        </div>
+      </section>
+
+      <!-- BLOQUE 02: VIDEO -->
+      <section
+        class="lesson-section"
+        id="etiqueta-video"
+        aria-labelledby="titulo-video"
+      >
+        <div class="section-heading">
+          <p class="lesson-number">Bloque 02</p>
+          <h2 id="titulo-video">Etiqueta &lt;video&gt; y carátula poster</h2>
+          <p>
+            Permite proyectar secuencias de vídeo con control total sobre su
+            dimensionamiento, carátula estática previa y modos de precarga.
+          </p>
+        </div>
+
+        <div class="media-demo-grid">
+          <article class="media-card media-card-blue">
+            <div class="card-header-badge">
+              <span class="badge-tag">Demostración en vivo</span>
+              <span class="badge-format">MP4 / WebM + Poster SVG</span>
+            </div>
+            <h3>Reproductor de vídeo con carátula</h3>
+            <p>
+              El atributo <code>poster</code> muestra una imagen representativa
+              mientras el vídeo no se ha iniciado, evitando recuadros negros o
+              saltos de diseño (CLS).
+            </p>
+
+            <div class="player-container video-player-box">
+              <video
+                controls
+                poster="media/poster.svg"
+                preload="metadata"
+                width="720"
+                height="405"
+                playsinline
+              >
+                <source src="media/video-ejemplo.mp4" type="video/mp4" />
+                <source src="media/video-ejemplo.webm" type="video/webm" />
+                <p>
+                  Tu navegador no soporta vídeo HTML5. Puedes
+                  <a href="media/video-ejemplo.mp4">descargar el archivo aquí</a>.
+                </p>
+              </video>
+            </div>
+
+            <div class="code-wrapper">
+              <span class="code-label">Código HTML5</span>
+              <pre><code>&lt;video controls poster="media/poster.svg" preload="metadata" width="720" height="405" playsinline&gt;
+  &lt;source src="media/video-ejemplo.mp4" type="video/mp4"&gt;
+  &lt;source src="media/video-ejemplo.webm" type="video/webm"&gt;
+  Tu navegador no soporta vídeo HTML5.
+&lt;/video&gt;</code></pre>
+            </div>
+          </article>
+
+          <article class="media-card media-card-mustard">
+            <div class="card-header-badge">
+              <span class="badge-tag">Casos de uso</span>
+              <span class="badge-format">Patrón UI</span>
+            </div>
+            <h3>Vídeo de fondo decorativo (Ambient video)</h3>
+            <p>
+              Cuando un vídeo actúa como fondo o elemento ambiental sin sonido,
+              los navegadores exigen que cumpla estrictamente los siguientes
+              cuatro atributos:
+            </p>
+
+            <div class="player-container ambient-player-box">
+              <div class="ambient-video-wrapper">
+                <video
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="auto"
+                  class="ambient-video"
+                  aria-hidden="true"
+                >
+                  <source src="media/video-ejemplo.mp4" type="video/mp4" />
+                  <source src="media/video-ejemplo.webm" type="video/webm" />
+                </video>
+                <div class="ambient-overlay">
+                  <span class="ambient-tag">Fondo ambiental</span>
+                  <p class="ambient-title">Superposición de contenido UI</p>
+                  <span class="ambient-status" aria-hidden="true">● En reproducción continua silenciada</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="code-wrapper">
+              <span class="code-label">Patrón de vídeo de fondo</span>
+              <pre><code>&lt;video autoplay muted loop playsinline aria-hidden="true"&gt;
+  &lt;source src="media/video-ejemplo.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+            </div>
+            <div class="card-tip-box">
+              <strong>Regla UX esencial:</strong> Si no incluye
+              <code>muted</code>, los navegadores bloquean la reproducción
+              automática. Además, si el vídeo es meramente ambiental, debe
+              ocultarse a tecnologías de asistencia mediante
+              <code>aria-hidden="true"</code> y pausarse si el usuario activa
+              <code>prefers-reduced-motion</code>.
+            </div>
+          </article>
+        </div>
+
+        <div class="ra-note">
+          <strong>RA3 · b</strong
+          ><span
+            >Configurar adecuadamente los atributos de presentación, carátulas y
+            dimensiones para optimizar la carga y la percepción visual.</span
+          >
+        </div>
+      </section>
+
+      <!-- BLOQUE 03: ACCESIBILIDAD Y TRACK -->
+      <section
+        class="lesson-section"
+        id="accesibilidad-multimedia"
+        aria-labelledby="titulo-accesibilidad"
+      >
+        <div class="section-heading">
+          <p class="lesson-number">Bloque 03</p>
+          <h2 id="titulo-accesibilidad">Accesibilidad: pistas &lt;track&gt; y WebVTT</h2>
+          <p>
+            La inclusión multimedia debe garantizar el acceso a personas con
+            discapacidad auditiva o dificultades de comprensión lingüística mediante
+            subtítulos normalizados en formato WebVTT.
+          </p>
+        </div>
+
+        <div class="media-demo-grid">
+          <article class="media-card media-card-teal">
+            <div class="card-header-badge">
+              <span class="badge-tag">Subtítulos interactivos</span>
+              <span class="badge-format">Formato .VTT</span>
+            </div>
+            <h3>Vídeo con subtítulos en castellano</h3>
+            <p>
+              Reproduce el clip y comprueba el selector de pistas nativo (icono
+              [CC]). El archivo <code>subtitulos.vtt</code> proporciona los textos
+              sincronizados por intervalos de tiempo.
+            </p>
+
+            <div class="player-container video-player-box">
+              <video
+                controls
+                poster="media/poster.svg"
+                preload="metadata"
+                playsinline
+              >
+                <source src="media/video-ejemplo.mp4" type="video/mp4" />
+                <source src="media/video-ejemplo.webm" type="video/webm" />
+                <track
+                  kind="subtitles"
+                  src="media/subtitulos.vtt"
+                  srclang="es"
+                  label="Español"
+                  default
+                />
+                Tu navegador no soporta vídeo con subtítulos.
+              </video>
+            </div>
+
+            <div class="code-wrapper">
+              <span class="code-label">Código con etiqueta &lt;track&gt;</span>
+              <pre><code>&lt;video controls poster="media/poster.svg"&gt;
+  &lt;source src="media/video-ejemplo.mp4" type="video/mp4"&gt;
+  &lt;track kind="subtitles"
+         src="media/subtitulos.vtt"
+         srclang="es"
+         label="Español"
+         default&gt;
+&lt;/video&gt;</code></pre>
+            </div>
+          </article>
+
+          <article class="media-card media-card-blue">
+            <div class="card-header-badge">
+              <span class="badge-tag">Estructura de archivo</span>
+              <span class="badge-format">media/subtitulos.vtt</span>
+            </div>
+            <h3>Sintaxis estándar de WebVTT</h3>
+            <p>
+              Todo archivo de subtítulos comienza obligatoriamente con la
+              cabecera <code>WEBVTT</code>, seguido de bloques con marcas de
+              tiempo (horas:minutos:segundos.milisegundos) y texto legible:
+            </p>
+
+            <div class="code-wrapper">
+              <span class="code-label">Contenido de subtitulos.vtt</span>
+              <pre><code>WEBVTT - Subtítulos para DIW UT3
+
+1
+00:00:00.500 --&gt; 00:00:02.000
+Demostración de la etiqueta video en HTML5.
+
+2
+00:00:02.500 --&gt; 00:00:04.500
+Apertura de pétalos y floración en primer plano.
+
+3
+00:00:05.000 --&gt; 00:00:06.000
+Fin del clip de prueba accesible.</code></pre>
+            </div>
+
+            <ul class="attribute-list">
+              <li>
+                <code>kind="subtitles"</code>
+                <span>Traducción o transcripción del diálogo hablado.</span>
+              </li>
+              <li>
+                <code>kind="captions"</code>
+                <span>Transcripción ampliada con efectos sonoros y música.</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="ra-note">
+          <strong>WCAG 2.2 · Nivel AA</strong
+          ><span
+            >Criterio 1.2: Proporcionar alternativas sincronizadas para
+            medios tempodependientes (subtítulos y transcripciones textuales).</span
+          >
+        </div>
+      </section>
+
+      <!-- BLOQUE 04: VIDEO RESPONSIVE CON CSS -->
+      <section
+        class="lesson-section"
+        id="video-responsive"
+        aria-labelledby="titulo-responsive"
+      >
+        <div class="section-heading">
+          <p class="lesson-number">Bloque 04</p>
+          <h2 id="titulo-responsive">Reproductores adaptables con CSS</h2>
+          <p>
+            Un error habitual en interfaces es declarar anchos fijos en píxeles
+            que desbordan las pantallas móviles. Con CSS moderno garantizamos
+            fluidez y preservamos la relación de aspecto panorámica.
+          </p>
+        </div>
+
+        <div class="responsive-comparison-grid">
+          <article class="responsive-demo-card">
+            <div class="responsive-card-badge badge-good">
+              <span>✓ Recomendado: Fluido con aspect-ratio</span>
+            </div>
+            <div class="responsive-video-shell">
+              <video
+                controls
+                poster="media/poster.svg"
+                class="fluid-video"
+                preload="none"
+              >
+                <source src="media/video-ejemplo.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="code-wrapper">
+              <span class="code-label">CSS moderno</span>
+              <pre><code>.fluid-video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+}</code></pre>
+            </div>
+            <p class="card-explanation">
+              Se estira y encoge suavemente adaptándose al contenedor padre sin
+              distorsión geométrica ni recortes indebidos.
+            </p>
+          </article>
+
+          <article class="responsive-demo-card">
+            <div class="responsive-card-badge badge-info">
+              <span>Técnica clásica: Contenedor proporcional</span>
+            </div>
+            <div class="code-wrapper">
+              <span class="code-label">CSS compatible navegadores antiguos</span>
+              <pre><code>/* Patrón clásico basado en padding-top */
+.video-ratio-box {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 9 / 16 = 56.25% */
+}
+
+.video-ratio-box video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}</code></pre>
+            </div>
+            <p class="card-explanation">
+              Utilizado cuando se requiere compatibilidad con motores de render
+              anteriores a la especificación nativa de <code>aspect-ratio</code>.
+            </p>
+          </article>
+        </div>
+
+        <div class="ra-note">
+          <strong>RA3 · c</strong
+          ><span
+            >Aplicar hojas de estilo para adaptar la reproducción multimedia a
+            diversos dispositivos y resoluciones sin perder la relación de aspecto.</span
+          >
+        </div>
+      </section>
+
+      <!-- BLOQUE 05: BUENAS PRÁCTICAS Y FORMATOS -->
+      <section
+        class="lesson-section"
+        id="buenas-practicas"
+        aria-labelledby="titulo-practicas"
+      >
+        <div class="section-heading">
+          <p class="lesson-number">Bloque 05</p>
+          <h2 id="titulo-practicas">Formatos y pautas de usabilidad</h2>
+          <p>
+            El diseño de interfaces exige encontrar el equilibrio exacto entre
+            fidelidad audiovisual, peso de descarga, consumo de batería y
+            accesibilidad para el usuario.
+          </p>
+        </div>
+
+        <div class="format-matrix">
+          <div class="matrix-column">
+            <h3>Formatos de vídeo</h3>
+            <div class="matrix-card">
+              <div class="matrix-head">
+                <strong>MP4 (H.264 + AAC)</strong>
+                <span class="tag-status tag-universal">Universal</span>
+              </div>
+              <p>
+                Máxima compatibilidad en todos los navegadores de escritorio y
+                móviles. Formato principal imprescindible.
+              </p>
+            </div>
+            <div class="matrix-card">
+              <div class="matrix-head">
+                <strong>WebM (VP9 / AV1)</strong>
+                <span class="tag-status tag-modern">Alta compresión</span>
+              </div>
+              <p>
+                Código abierto y menor tasa de bits manteniendo calidad. Ideal
+                como primera fuente alternativa antes de MP4.
+              </p>
+            </div>
+          </div>
+
+          <div class="matrix-column">
+            <h3>Formatos de audio</h3>
+            <div class="matrix-card">
+              <div class="matrix-head">
+                <strong>MP3 (audio/mpeg)</strong>
+                <span class="tag-status tag-universal">Estándar web</span>
+              </div>
+              <p>
+                Soporte total en cualquier navegador y dispositivo. La opción más
+                segura y estable.
+              </p>
+            </div>
+            <div class="matrix-card">
+              <div class="matrix-head">
+                <strong>Ogg / AAC / WAV</strong>
+                <span class="tag-status tag-modern">Alternativas</span>
+              </div>
+              <p>
+                Ogg Vorbis para entornos de código abierto, AAC para streaming de
+                alta fidelidad y WAV para muestras sin compresión.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ux-checklist">
+          <h3>Decálogo de experiencia de usuario en multimedia (UX)</h3>
+          <div class="checklist-grid">
+            <div class="check-item">
+              <span class="check-num">01</span>
+              <div>
+                <strong>Autonomía en el sonido</strong>
+                <p>
+                  Nunca reproduzcas audio de forma imprevista. El usuario debe
+                  decidir cuándo y cómo escuchar.
+                </p>
+              </div>
+            </div>
+            <div class="check-item">
+              <span class="check-num">02</span>
+              <div>
+                <strong>Economía de datos móviles</strong>
+                <p>
+                  Emplea <code>preload="none"</code> o <code>preload="metadata"</code>
+                  para no consumir la cuota de conexión del usuario antes de que
+                  pulse reproducir.
+                </p>
+              </div>
+            </div>
+            <div class="check-item">
+              <span class="check-num">03</span>
+              <div>
+                <strong>Feedback y carátula clara</strong>
+                <p>
+                  Un buen atributo <code>poster</code> contextualiza el vídeo y
+                  comunica qué contenido encontrará el usuario.
+                </p>
+              </div>
+            </div>
+            <div class="check-item">
+              <span class="check-num">04</span>
+              <div>
+                <strong>Inclusión para todos</strong>
+                <p>
+                  Acompaña siempre tus vídeos con subtítulos <code>&lt;track&gt;</code>
+                  o proporciona una transcripción textual descargable.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        <span class="footer-mark" aria-hidden="true"></span> Material de apoyo ·
+        Segundo de DAW · Diseño de interfaces web
+      </p>
+      <nav aria-label="Navegación del pie">
+        <a href="../index.html">Portada</a>
+        <a href="../UT1/index.html">UT1</a>
+        <a href="../UT2/index.html">UT2</a>
+        <a href="../README.md">Repositorio</a>
+      </nav>
+    </footer>
+  </body>
+</html>

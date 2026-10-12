@@ -350,6 +350,9 @@ h2 {
 .lesson-card-blue {
   border-top: 5px solid var(--blue);
 }
+.lesson-card-teal {
+  border-top: 5px solid var(--teal);
+}
 
 .card-topline {
   position: absolute;
@@ -365,6 +368,9 @@ h2 {
 }
 .lesson-card-blue .unit-number {
   color: var(--blue);
+}
+.lesson-card-teal .unit-number {
+  color: var(--teal);
 }
 
 .card-arrow {
@@ -387,7 +393,10 @@ h2 {
 .visual-triangle,
 .visual-plane,
 .visual-shadow,
-.visual-texture {
+.visual-texture,
+.visual-screen,
+.visual-play,
+.visual-wave {
   position: absolute;
   display: block;
 }
@@ -443,6 +452,46 @@ h2 {
   background-image: radial-gradient(#9b7411 1px, transparent 1px);
   background-size: 9px 9px;
 }
+.visual-screen {
+  top: 60px;
+  left: 15%;
+  width: 70%;
+  height: 140px;
+  background: var(--dark);
+  border: 4px solid var(--teal);
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(29, 156, 145, 0.18);
+}
+.visual-play {
+  top: 130px;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-left: 30px solid var(--coral);
+}
+.visual-wave {
+  bottom: 34px;
+  height: 6px;
+  background: var(--mustard);
+  border-radius: 3px;
+}
+.visual-wave.wave-1 {
+  left: 16%;
+  width: 20%;
+}
+.visual-wave.wave-2 {
+  left: 40%;
+  width: 32%;
+  background: var(--teal);
+}
+.visual-wave.wave-3 {
+  right: 16%;
+  width: 14%;
+  background: var(--coral);
+}
 
 .card-content {
   align-self: end;
@@ -484,6 +533,9 @@ h3 {
 }
 .lesson-card-blue .card-link:hover {
   color: var(--blue);
+}
+.lesson-card-teal .card-link:hover {
+  color: var(--teal);
 }
 
 .principles-section {
