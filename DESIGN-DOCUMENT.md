@@ -51,12 +51,18 @@ index.html · Diseño de interfaces web
 │   ├── 02 · Conmutación dinámica de temas
 │   ├── 03 · Selectores CSS: tipos, clases e identificadores
 │   └── 04 · Modelo de caja
-└── UT3/index.html · Archivos multimedia
-    ├── 01 · Etiqueta <audio> y atributos de control
-    ├── 02 · Etiqueta <video> y carátula poster
-    ├── 03 · Accesibilidad: pistas y subtítulos <track>
-    ├── 04 · Reproductores adaptables y fluidos con CSS
-    └── 05 · Formatos web y pautas de usabilidad
+├── UT3/index.html · Archivos multimedia
+│   ├── 01 · Etiqueta <audio> y atributos de control
+│   ├── 02 · Etiqueta <video> y carátula poster
+│   ├── 03 · Accesibilidad: pistas y subtítulos <track>
+│   ├── 04 · Reproductores adaptables y fluidos con CSS
+│   └── 05 · Formatos web y pautas de usabilidad
+└── UT4/index.html · Contenido interactivo
+    ├── 01 · Control programático con HTMLMediaElement
+    ├── 02 · SVG dinámico manipulado por el DOM
+    ├── 03 · Bucles de animación: requestAnimationFrame y Canvas
+    ├── 04 · Componentes interactivos: Bootstrap 5 y API JS
+    └── 05 · Eventos táctiles, DevTools y testing cross-browser
 ```
 
 Las páginas agrupadas de cada unidad son las entradas recomendadas. Los archivos `UT1_*.html` se conservan como ejemplos independientes para facilitar el estudio de cada ejercicio por separado.

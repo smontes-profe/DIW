@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="UT4: Integración de contenido multimedia e interactivo en la web. HTMLMediaElement, SVG dinámico, bucles de animación, Bootstrap interactivo y eventos táctiles."
+    />
+    <title>UT4 · Contenido interactivo</title>
+    <!-- Bootstrap 5 opcional para demostración de componentes interactivos -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          class="brand"
+          href="../index.html"
+          aria-label="Diseño de interfaces web, inicio"
+        >
+          <span class="brand-mark" aria-hidden="true">
+            <i></i><i></i><i></i>
+          </span>
+          <span>DIW<span class="brand-dot">.</span></span>
+        </a>
+        <nav aria-label="Navegación de la unidad">
+          <a href="../index.html">Inicio</a>
+          <a href="#media-element">HTMLMediaElement</a>
+          <a href="#svg-dinamico">SVG Dinámico</a>
+          <a href="#animation-loops">Animaciones</a>
+          <a href="#bootstrap-js">Bootstrap & JS</a>
+          <a href="#tactil-devtools">Táctil & DevTools</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="unit-hero" aria-labelledby="titulo-unidad">
+        <p class="eyebrow">Unidad de trabajo 04 · Contenido interactivo</p>
+        <h1 id="titulo-unidad">De páginas estáticas<br />a interfaces dinámicas.</h1>
+        <p>
+          La web moderna trasciende el folleto digital pasivo. En esta unidad
+          combinamos el DOM, la API programática de medios, gráficos vectoriales
+          reactivos, bucles de renderizado a 60 fps y componentes avanzados
+          verificados en entornos táctiles y multi-dispositivo.
+        </p>
+      </section>
+
+      <nav class="lesson-index" aria-label="Índice de contenidos de UT4">
+        <a href="#media-element">
+          <span>01</span> Control programático con HTMLMediaElement
+        </a>
+        <a href="#svg-dinamico">
+          <span>02</span> SVG dinámico manipulado por el DOM
+        </a>
+        <a href="#animation-loops">
+          <span>03</span> Bucles de animación: requestAnimationFrame
+        </a>
+        <a href="#bootstrap-js">
+          <span>04</span> Componentes interactivos: Bootstrap y JS
+        </a>
+        <a href="#tactil-devtools">
+          <span>05</span> Eventos táctiles, DevTools y testing
+        </a>
+      </nav>
+
+      <!-- BLOQUE 01: HTMLMEDIAELEMENT -->
+      <section
+        class="lesson-section"
+        id="media-element"
+        aria-labelledby="titulo-media-element"
+      >
+        <div class="section-heading">
+          <p class="lesson-number">Bloque 01</p>
+          <h2 id="titulo-media-element">Control con HTMLMediaElement</h2>
+          <p>
+            Ocultando los controles nativos del navegador, JavaScript nos permite
+            construir reproductores personalizados con identidad de marca y control
+            preciso sobre el estado, volumen y barra de tiempo.
+          </p>
+        </div>
+
+        <div class="interactive-grid">
+          <article class="interactive-card card-mustard">
+            <div class="card-badge">
+              <span class="badge-tag">Demostración en vivo</span>
+              <span class="badge-tech">API JS Nativa</span>
+            </div>
+            <h3>Reproductor personalizado por JavaScript</h3>
+            <p>
+              Este reproductor no utiliza el atributo <code>controls</code>. Toda
+              la interacción (play, pausa, mute, avance y volumen) se gestiona
+              mediante métodos y propiedades de <code>HTMLMediaElement</code>.
+            </p>
+
+            <!-- Elemento de audio sin controls -->
+            <audio id="demo-audio-player" preload="metadata">
+              <source src="media/audio-interactivo.mp3" type="audio/mpeg" />
+            </audio>
+
+            <div class="custom-player-shell">
+              <div class="custom-player-header">
+                <span class="track-title">Pista de audio interactiva</span>
+                <span id="media-status-badge" class="track-status">Pausado</span>
+              </div>
+
+              <!-- Barra de progreso interactiva -->
+              <div class="progress-container">
+                <input
+                  type="range"
+                  id="media-seek"
+                  class="seek-range"
+                  min="0"
+                  max="100"
+                  value="0"
+                  aria-label="Posición de reproducción"
+                />
+                <span id="media-time" class="time-label">00:00 / 00:00</span>
+              </div>
+
+              <!-- Botonera de control personalizada -->
+              <div class="custom-player-controls">
+                <button
+                  type="button"
+                  id="media-btn-play"
+                  class="ui-btn ui-btn-primary"
+                  aria-label="Iniciar reproducción"
+                >
+                  ▶ Reproducir
+                </button>
+                <button
+                  type="button"
+                  id="media-btn-mute"
+                  class="ui-btn ui-btn-secondary"
+                  aria-label="Silenciar sonido"
+                >
+                  🔊 Silenciar
+                </button>
+                <div class="volume-box">
+                  <label for="media-volume" class="vol-label">Volumen</label>
+                  <input
+                    type="range"
+                    id="media-volume"
+                    class="vol-range"
+                    min="0"
+                    max="1"
+                    step="0.05"
+                    value="1"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="code-wrapper">
+              <span class="code-label">Lógica JavaScript</span>
+              <pre><code>// Métodos y propiedades clave de HTMLMediaElement
+const media = document.querySelector('#miAudio');
+
+// Reproducción y pausa programática
+media.play();  // Devuelve una Promise
+media.pause(); // Pausa inmediata
+
+// Sincronización en tiempo real
+media.addEventListener('timeupdate', () => {
+  const progreso = (media.currentTime / media.duration) * 100;
+  seekBar.value = progreso;
+});</code></pre>
+            </div>
+          </article>
+
+          <article class="interactive-card card-teal">
+            <div class="card-badge">
+              <span class="badge-tag">Referencia técnica</span>
+              <span class="badge-tech">CE 4.E · CE 4.F</span>
+            </div>
+            <h3>Métodos, propiedades y eventos esenciales</h3>
+            <ul class="prop-table">
+              <li>
+                <code>.play()</code>
+                <span>Inicia la reproducción. Devuelve una Promesa susceptible de ser rechazada por políticas de autoplay.</span>
+              </li>
+              <li>
+                <code>.pause()</code>
+                <span>Detiene la reproducción sin reiniciar la posición temporal.</span>
+              </li>
+              <li>
+                <code>.currentTime</code>
+                <span>Lectura y escritura del punto actual de reproducción en segundos. Permite saltos temporales.</span>
+              </li>
+              <li>
+                <code>.duration</code>
+                <span>Longitud total en segundos. Disponible tras el evento <code>loadedmetadata</code>.</span>
+              </li>
+              <li>
+                <code>.volume</code>
+                <span>Nivel de audio en escala flotante de <code>0.0</code> (silencio) a <code>1.0</code> (máximo).</span>
+              </li>
+              <li>
+                <code>timeupdate</code>
+                <span>Evento emitido recurrentemente conforme avanza el cabezal de lectura.</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="ra-note">
+          <strong>CE 4.E · CE 4.F</strong>
+          <span>Controlar programáticamente elementos multimedia mediante JavaScript para crear experiencias de usuario coherentes y personalizadas.</span>
+        </div>
+      </section>
+
+      <!-- BLOQUE 02: SVG DINÁMICO -->
+      <section
+        class="lesson-section"
+        id="svg-dinamico"
+        aria-labelledby="titulo-svg"
+      >
+        <div class="section-heading">
+          <p class="lesson-number">Bloque 02</p>
+          <h2 id="titulo-svg">SVG dinámico en el DOM</h2>
+          <p>
+            Al insertar gráficos vectoriales SVG de forma inline, sus formas
+            forman parte del árbol DOM y pueden inspeccionarse, animarse y
+            reaccionar a eventos igual que un botón o un párrafo HTML.
+          </p>
+        </div>
+
+        <div class="interactive-grid">
+          <article class="interactive-card card-coral">
+            <div class="card-badge">
+              <span class="badge-tag">Gráfico reactivo</span>
+              <span class="badge-tech">SVG Inline + DOM API</span>
+            </div>
+            <h3>Manipulación vectorial en tiempo real</h3>
+            <p>
+              Interactúa con los controles o pulsa directamente sobre el nodo
+              circular del SVG para comprobar la reactividad del DOM.
+            </p>
+
+            <div class="svg-stage">
+              <svg
+                id="svg-interactive-canvas"
+                viewBox="0 0 200 200"
+                width="160"
+                height="160"
+                role="img"
+                aria-label="Gráfico SVG dinámico interactivo"
+              >
+                <!-- Anillo exterior de fondo -->
+                <circle
+                  cx="100"
+                  cy="100"
+                  r="45"
+                  fill="none"
+                  stroke="rgba(255, 255, 255, 0.12)"
+                  stroke-width="8"
+                />
+                <!-- Anillo de progreso animable con stroke-dashoffset -->
+                <circle
+                  id="svg-progress-arc"
+                  cx="100"
+                  cy="100"
+                  r="45"
+                  fill="none"
+                  stroke="#1d9c91"
+                  stroke-width="8"
+                  stroke-dasharray="283"
+                  stroke-dashoffset="283"
+                  stroke-linecap="round"
+                  transform="rotate(-90 100 100)"
+                />
+                <!-- Círculo interior reactivo al clic -->
+                <circle
+                  id="svg-dynamic-circle"
+                  cx="100"
+                  cy="100"
+                  r="30"
+                  fill="#eab84b"
+                  class="svg-node"
+                />
+                <text
+                  x="100"
+                  y="105"
+                  text-anchor="middle"
+                  fill="#20252b"
+                  font-family="'Space Grotesk', sans-serif"
+                  font-size="12"
+                  font-weight="700"
+                  pointer-events="none"
+                >
+                  DOM
+                </text>
+              </svg>
+
+              <div class="svg-controls">
+                <button type="button" id="btn-svg-color" class="ui-btn ui-btn-outline">
+                  Alternar fill
+                </button>
+                <button type="button" id="btn-svg-dash" class="ui-btn ui-btn-outline">
+                  Avanzar arco (+25%)
+                </button>
+                <button type="button" id="btn-svg-scale" class="ui-btn ui-btn-outline">
+                  Escalar nodo
+                </button>
+                <div class="svg-status-indicator">
+                  <strong>Estado DOM:</strong> <span id="svg-state-label">fill: #eab84b</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="code-wrapper">
+              <span class="code-label">Manipulación de SVG con JS</span>
+              <pre><code>// Selección directa del nodo SVG en el árbol DOM
+const circulo = document.querySelector('#svg-dynamic-circle');
+
+// Modificar atributos de presentación
+circulo.setAttribute('fill', '#ef745f');
+
+// Animar trazo con stroke-dashoffset
+const arco = document.querySelector('#svg-progress-arc');
+arco.style.strokeDashoffset = '141px'; // 50% de la circunferencia</code></pre>
+            </div>
+          </article>
+
+          <article class="interactive-card card-blue">
+            <div class="card-badge">
+              <span class="badge-tag">Ventajas de diseño</span>
+              <span class="badge-tech">SVG vs Raster</span>
+            </div>
+            <h3>¿Por qué SVG inline en interfaces?</h3>
+            <ul class="prop-table">
+              <li>
+                <code>Escalabilidad</code>
+                <span>Nitidez matemática infinita en pantallas Retina sin aumentar el peso de transferencia en kilobytes.</span>
+              </li>
+              <li>
+                <code>Estilos con CSS</code>
+                <span>Soporta pseudoclases <code>:hover</code>, variables CSS (<code>currentColor</code>) y transiciones fluidas.</span>
+              </li>
+              <li>
+                <code>Accesibilidad</code>
+                <span>Se etiqueta semánticamente con <code>role="img"</code>, <code>&lt;title&gt;</code> y <code>aria-label</code>.</span>
+              </li>
+              <li>
+                <code>Animación de trazos</code>
+                <span>La técnica de <code>stroke-dasharray</code> y <code>stroke-dashoffset</code> permite crear loaders y diagramas dinámicos.</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="ra-note">
+          <strong>CE 4.A · CE 4.F</strong>
+          <span>Integrar gráficos vectoriales escalables e interactuar con sus elementos mediante eventos y métodos del DOM.</span>
+        </div>
+      </section>
+
+      <!-- BLOQUE 03: BUCLES DE ANIMACIÓN Y CANVAS -->
+      <section
+        class="lesson-section"
+        id="animation-loops"
+        aria-labelledby="titulo-animaciones"
+      >
+        <div class="section-heading">
+          <p class="lesson-number">Bloque 03</p>
+          <h2 id="titulo-animaciones">Bucles: requestAnimationFrame</h2>
+          <p>
+            Para animaciones complejas y renderizado gráfico sobre <code>&lt;canvas&gt;</code>,
+            <code>requestAnimationFrame</code> sincroniza los cálculos con el refresco de
+            pantalla (60 Hz) optimizando la batería y el rendimiento.
+          </p>
+        </div>
+
+        <div class="interactive-grid">
+          <article class="interactive-card card-teal">
+            <div class="card-badge">
+              <span class="badge-tag">Lienzo en tiempo real</span>
+              <span class="badge-tech">Canvas 2D + rAF</span>
+            </div>
+            <h3>Osciloscopio armónico a 60 fps</h3>
+            <p>
+              El bucle recalcula las funciones trigonométricas y dibuja el trazado
+              en cada cuadro. Prueba a pausar o ajustar la frecuencia.
+            </p>
+
+            <div class="canvas-stage">
+              <canvas
+                id="canvas-animacion"
+                role="img"
+                aria-label="Animación en tiempo real de ondas senoidales sobre canvas"
+              ></canvas>
+
+              <div class="canvas-bar">
+                <button
+                  type="button"
+                  id="btn-loop-toggle"
+                  class="ui-btn ui-btn-primary"
+                >
+                  ⏸ Pausar bucle
+                </button>
+                <div class="loop-control-group">
+                  <label for="loop-speed">Frecuencia:</label>
+                  <input
+                    type="range"
+                    id="loop-speed"
+                    min="0.2"
+                    max="3.0"
+                    step="0.1"
+                    value="1.0"
+                  />
+                </div>
+                <span id="loop-fps" class="fps-badge">60 FPS</span>
+              </div>
+            </div>
+
+            <div class="code-wrapper">
+              <span class="code-label">Patrón del bucle de animación</span>
+              <pre><code>function animar(timestamp) {
+  // 1. Limpiar el lienzo
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // 2. Calcular nuevo estado y dibujar
+  dibujarOnda(fase);
+  fase += velocidad;
+
+  // 3. Solicitar el siguiente fotograma al navegador
+  requestAnimationFrame(animar);
+}
+requestAnimationFrame(animar);</code></pre>
+            </div>
+          </article>
+
+          <article class="interactive-card card-mustard">
+            <div class="card-badge">
+              <span class="badge-tag">Comparativa técnica</span>
+              <span class="badge-tech">rAF vs setInterval</span>
+            </div>
+            <h3>requestAnimationFrame frente a temporizadores clásicos</h3>
+            <ul class="prop-table">
+              <li>
+                <code>Sincronización v-sync</code>
+                <span>rAF se ejecuta justo antes del repintado de la pantalla, evitando tearing o saltos de fotogramas (jank).</span>
+              </li>
+              <li>
+                <code>Ahorro de batería</code>
+                <span>Se detiene automáticamente cuando la pestaña está en segundo plano. <code>setInterval</code> sigue consumiendo CPU.</span>
+              </li>
+              <li>
+                <code>prefers-reduced-motion</code>
+                <span>Permite consultar <code>matchMedia()</code> para pausar o reducir drásticamente los cálculos ante mareos visuales.</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="ra-note">
+          <strong>CE 4.F</strong>
+          <span>Implementar secuencias de animación programadas con requestAnimationFrame para optimizar el hilo principal y el consumo energético.</span>
+        </div>
+      </section>
+
+      <!-- BLOQUE 04: BOOTSTRAP Y JS -->
+      <section
+        class="lesson-section"
+        id="bootstrap-js"
+        aria-labelledby="titulo-bootstrap"
+      >
+        <div class="section-heading">
+          <p class="lesson-number">Bloque 04</p>
+          <h2 id="titulo-bootstrap">Bootstrap 5 y componentes con JS</h2>
+          <p>
+            Bootstrap ofrece dos vías de interactividad: la declarativa mediante
+            atributos <code>data-bs-*</code> y la programática a través de su API
+            JavaScript (<code>new bootstrap.Modal()</code>), con eventos de ciclo de vida.
+          </p>
+        </div>
+
+        <div class="interactive-grid">
+          <article class="interactive-card card-blue">
+            <div class="card-badge">
+              <span class="badge-tag">Demostración interactiva</span>
+              <span class="badge-tech">Bootstrap 5.3 + API JS</span>
+            </div>
+            <h3>Disparo declarativo frente a programático</h3>
+            <p>
+              Prueba abrir el componente modal usando el atributo nativo de marcado
+              o mediante una llamada directa en JavaScript. Observa la consola de
+              eventos inferior.
+            </p>
+
+            <div class="modal-trigger-box">
+              <button
+                type="button"
+                class="ui-btn ui-btn-outline"
+                data-bs-toggle="modal"
+                data-bs-target="#demoModal"
+              >
+                1. Abrir con data-bs-toggle
+              </button>
+              <button
+                type="button"
+                id="btn-js-open-modal"
+                class="ui-btn ui-btn-primary"
+              >
+                2. Abrir con JS: modal.show()
+              </button>
+            </div>
+
+            <!-- Consola interactiva de eventos de Bootstrap -->
+            <div class="bs-console-wrapper">
+              <div class="console-head">Consola de eventos del componente (Bootstrap)</div>
+              <div id="bs-event-console" class="console-body" aria-live="polite">
+                <div class="console-entry">Esperando interacción con el modal...</div>
+              </div>
+            </div>
+
+            <div class="code-wrapper">
+              <span class="code-label">Control programático por API</span>
+              <pre><code>// Instanciación por JavaScript
+const modalEl = document.querySelector('#demoModal');
+const modal = new bootstrap.Modal(modalEl);
+
+// Apertura condicional
+modal.show();
+
+// Escucha de eventos de ciclo de vida
+modalEl.addEventListener('shown.bs.modal', () => {
+  console.log('Modal visible y foco transferido al diálogo.');
+});</code></pre>
+            </div>
+          </article>
+
+          <article class="interactive-card card-coral">
+            <div class="card-badge">
+              <span class="badge-tag">Accesibilidad</span>
+              <span class="badge-tech">WCAG 2.2 · ARIA</span>
+            </div>
+            <h3>Buenas prácticas en modales interactivos</h3>
+            <ul class="prop-table">
+              <li>
+                <code>Atrapado de foco (Focus Trap)</code>
+                <span>La tecla <kbd>Tab</kbd> no debe escapar del diálogo mientras el modal esté abierto. Bootstrap lo gestiona automáticamente.</span>
+              </li>
+              <li>
+                <code>Cierre con Escape</code>
+                <span>El usuario debe poder cerrar el diálogo pulsando <kbd>Esc</kbd> en cualquier momento.</span>
+              </li>
+              <li>
+                <code>Restauración de foco</code>
+                <span>Al cerrarse, el foco del teclado debe regresar al botón disparador que lo abrió.</span>
+              </li>
+              <li>
+                <code>Atributos semánticos</code>
+                <span>Requiere <code>role="dialog"</code>, <code>aria-modal="true"</code> y <code>aria-labelledby</code> apuntando al título.</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Modal interactivo de Bootstrap -->
+        <div
+          class="modal fade"
+          id="demoModal"
+          tabindex="-1"
+          aria-labelledby="modalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title fs-5" id="modalLabel">
+                  Componente Modal Interactivo
+                </h3>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Cerrar ventana modal"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  Este diálogo modal demuestra la integración entre la capa de
+                  presentación de Bootstrap y la escucha de eventos en JavaScript.
+                </p>
+                <div class="alert alert-info py-2 mb-0" role="alert">
+                  <strong>Accesibilidad activa:</strong> El foco se encuentra
+                  atrapado dentro del cuadro de diálogo. Pulsa <kbd>Esc</kbd> o el
+                  botón de cierre para retornar el foco al botón de origen.
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="ui-btn ui-btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+                <button
+                  type="button"
+                  class="ui-btn ui-btn-primary"
+                  data-bs-dismiss="modal"
+                >
+                  Entendido
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ra-note">
+          <strong>CE 4.A · CE 4.F</strong>
+          <span>Integrar frameworks como Bootstrap 5 combinando atributos declarativos y control por API JavaScript accesible.</span>
+        </div>
+      </section>
+
+      <!-- BLOQUE 05: EVENTOS TÁCTILES Y DEVTOOLS -->
+      <section
+        class="lesson-section"
+        id="tactil-devtools"
+        aria-labelledby="titulo-tactil"
+      >
+        <div class="section-heading">
+          <p class="lesson-number">Bloque 05</p>
+          <h2 id="titulo-tactil">Eventos táctiles y DevTools</h2>
+          <p>
+            Las pantallas táctiles sustituyen el cursor preciso por toques de
+            superficie variable. La verificación exige respetar áreas mínimas de
+            44×44 px y simular condiciones adversas con las DevTools del navegador.
+          </p>
+        </div>
+
+        <div class="interactive-grid">
+          <article class="interactive-card card-mustard">
+            <div class="card-badge">
+              <span class="badge-tag">Simulador táctil</span>
+              <span class="badge-tech">Touch Events API</span>
+            </div>
+            <h3>Laboratorio de eventos táctiles</h3>
+            <p>
+              Toca o arrastra el dedo (o el ratón) en el área de testeo para
+              inspeccionar los eventos disparados y las coordenadas relativas.
+            </p>
+
+            <div id="touch-test-pad" class="touch-surface">
+              <div class="touch-guide">
+                <span class="touch-icon" aria-hidden="true">👆</span>
+                <strong>Área de captura de toques</strong>
+                <p>touchstart · touchmove · touchend</p>
+              </div>
+              <div class="touch-readout">
+                <span id="touch-status-text">Sin eventos registrados</span>
+                <span id="touch-coords-text">Esperando interacción</span>
+              </div>
+            </div>
+
+            <!-- Comparativa de tamaño de objetivo táctil WCAG -->
+            <div class="target-size-demo">
+              <h4>Criterio WCAG 2.5.8: Tamaño de objetivo táctil</h4>
+              <div class="target-comparison">
+                <div class="target-box target-good">
+                  <button type="button" class="target-btn btn-accessible">
+                    44 × 44 px
+                  </button>
+                  <small>✓ Conforme AA (Fácil de pulsar)</small>
+                </div>
+                <div class="target-box target-bad">
+                  <button type="button" class="target-btn btn-inaccessible">
+                    22 px
+                  </button>
+                  <small>✕ No accesible (Error de toque)</small>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="interactive-card card-teal">
+            <div class="card-badge">
+              <span class="badge-tag">Auditoría y verificación</span>
+              <span class="badge-tech">DevTools & Motores</span>
+            </div>
+            <h3>Verificación profesional con DevTools</h3>
+            <ul class="prop-table">
+              <li>
+                <code>Device Mode</code>
+                <span>Simulación de viewports móviles, pixel ratio (DPR), rotación de pantalla y emulación de puntero táctil.</span>
+              </li>
+              <li>
+                <code>Network Throttling</code>
+                <span>Simulación de redes 3G lentas para comprobar tiempos de carga de recursos y estados visuales de espera.</span>
+              </li>
+              <li>
+                <code>CPU Throttling</code>
+                <span>Estrangulamiento de 4× o 6× de CPU para detectar caídas de fotogramas en animaciones de dispositivos de gama baja.</span>
+              </li>
+              <li>
+                <code>Motores de render</code>
+                <span>Verificación en <strong>Blink</strong> (Chrome, Edge), <strong>Gecko</strong> (Firefox) y <strong>WebKit</strong> (Safari).</span>
+              </li>
+            </ul>
+
+            <div class="card-tip-box mt-3">
+              <strong>Feature Detection vs Browser Sniffing:</strong> Nunca compruebes
+              el navegador con el <code>userAgent</code>. Emplea detección de soporte
+              como <code>if ('ontouchstart' in window)</code> o en CSS con
+              <code>@media (hover: none) and (pointer: coarse)</code>.
+            </div>
+          </article>
+        </div>
+
+        <div class="ra-note">
+          <strong>CE 4.G</strong>
+          <span>Verificar la experiencia interactiva en múltiples dispositivos emulando condiciones de red y táctiles con las herramientas de desarrollo.</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        <span class="footer-mark" aria-hidden="true"></span> Material de apoyo ·
+        Segundo de DAW · Diseño de interfaces web
+      </p>
+      <nav aria-label="Navegación del pie">
+        <a href="../index.html">Portada</a>
+        <a href="../UT1/index.html">UT1</a>
+        <a href="../UT2/index.html">UT2</a>
+        <a href="../UT3/index.html">UT3</a>
+        <a href="../README.md">Repositorio</a>
+      </nav>
+    </footer>
+
+    <!-- Scripts de Bootstrap y lógica interactiva de UT4 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="interactivo.js" defer></script>
+  </body>
+</html>
