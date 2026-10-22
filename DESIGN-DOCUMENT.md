@@ -50,7 +50,8 @@ index.html · Diseño de interfaces web
     ├── 01 · Tipos de aplicación de estilos CSS
     ├── 02 · Conmutación dinámica de temas
     ├── 03 · Selectores CSS: tipos, clases e identificadores
-    └── 04 · Modelo de caja
+    ├── 04 · Modelo de caja
+    └── 05 · Bootstrap responsive
 ```
 
 Las páginas agrupadas de cada unidad son las entradas recomendadas. Los archivos `UT1_*.html` se conservan como ejemplos independientes para facilitar el estudio de cada ejercicio por separado.

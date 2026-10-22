@@ -594,6 +594,36 @@ h2 {
 .box-model-code pre { min-height: 150px; }
 .teal-note { background: #e3eee9; border-left-color: var(--teal); }
 .teal-note strong { color: var(--teal); }
+.bootstrap-demo {
+  padding: 24px;
+  background: #e8eef0;
+}
+.bootstrap-card {
+  padding: 1.5rem;
+  color: var(--ink);
+  background: var(--panel);
+  border-top: 4px solid var(--blue);
+}
+.bootstrap-card h3 { margin: 18px 0 8px; }
+.bootstrap-card p { margin: 0; color: var(--muted); line-height: 1.55; }
+.bootstrap-number {
+  color: var(--blue);
+  font: 700 0.75rem Consolas, monospace;
+}
+.bootstrap-code-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+.bootstrap-code-grid > div > span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--blue);
+  font: 700 0.7rem Consolas, monospace;
+  text-transform: uppercase;
+}
+.bootstrap-code-grid pre { min-height: 150px; }
 .tools-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -815,6 +845,7 @@ pre {
     grid-template-columns: 1fr;
   }
   .box-model-layout { grid-template-columns: 1fr; }
+  .bootstrap-code-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 580px) {
   .header-inner,
@@ -875,6 +906,7 @@ pre {
     grid-template-columns: 1fr;
   }
   .box-model-code { grid-template-columns: 1fr; }
+  .bootstrap-demo { padding: 14px; }
   .outcomes {
     grid-template-columns: 1fr;
     gap: 15px;
