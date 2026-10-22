@@ -350,6 +350,12 @@ h2 {
 .lesson-card-blue {
   border-top: 5px solid var(--blue);
 }
+.lesson-card-teal {
+  border-top: 5px solid var(--teal);
+}
+.lesson-card-mustard {
+  border-top: 5px solid var(--mustard);
+}
 
 .card-topline {
   position: absolute;
@@ -365,6 +371,12 @@ h2 {
 }
 .lesson-card-blue .unit-number {
   color: var(--blue);
+}
+.lesson-card-teal .unit-number {
+  color: var(--teal);
+}
+.lesson-card-mustard .unit-number {
+  color: #b3820a;
 }
 
 .card-arrow {
@@ -387,7 +399,15 @@ h2 {
 .visual-triangle,
 .visual-plane,
 .visual-shadow,
-.visual-texture {
+.visual-texture,
+.visual-screen,
+.visual-play,
+.visual-wave,
+.visual-interactive-btn,
+.visual-interactive-pulse,
+.visual-touch-cursor,
+.visual-slider-track,
+.visual-slider-thumb {
   position: absolute;
   display: block;
 }
@@ -443,6 +463,100 @@ h2 {
   background-image: radial-gradient(#9b7411 1px, transparent 1px);
   background-size: 9px 9px;
 }
+.visual-screen {
+  top: 60px;
+  left: 15%;
+  width: 70%;
+  height: 140px;
+  background: var(--dark);
+  border: 4px solid var(--teal);
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(29, 156, 145, 0.18);
+}
+.visual-play {
+  top: 130px;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-left: 30px solid var(--coral);
+}
+.visual-wave {
+  bottom: 34px;
+  height: 6px;
+  background: var(--mustard);
+  border-radius: 3px;
+}
+.visual-wave.wave-1 {
+  left: 16%;
+  width: 20%;
+}
+.visual-wave.wave-2 {
+  left: 40%;
+  width: 32%;
+  background: var(--teal);
+}
+.visual-wave.wave-3 {
+  right: 16%;
+  width: 14%;
+  background: var(--coral);
+}
+
+.visual-interactive-btn {
+  top: 62px;
+  left: 20%;
+  width: 60%;
+  height: 48px;
+  background: var(--mustard);
+  border-radius: 24px;
+  box-shadow: 0 6px 16px rgba(234, 184, 75, 0.28);
+}
+.visual-interactive-pulse {
+  top: 86px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px solid var(--mustard);
+}
+.visual-interactive-pulse.pulse-1 {
+  width: 74px;
+  height: 74px;
+  opacity: 0.6;
+}
+.visual-interactive-pulse.pulse-2 {
+  width: 104px;
+  height: 104px;
+  opacity: 0.3;
+}
+.visual-touch-cursor {
+  top: 135px;
+  right: 25%;
+  width: 32px;
+  height: 32px;
+  background: var(--teal);
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+.visual-slider-track {
+  bottom: 40px;
+  left: 18%;
+  width: 64%;
+  height: 8px;
+  background: #dcd7cc;
+  border-radius: 4px;
+}
+.visual-slider-thumb {
+  bottom: 34px;
+  left: 55%;
+  width: 20px;
+  height: 20px;
+  background: var(--coral);
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
 
 .card-content {
   align-self: end;
@@ -484,6 +598,12 @@ h3 {
 }
 .lesson-card-blue .card-link:hover {
   color: var(--blue);
+}
+.lesson-card-teal .card-link:hover {
+  color: var(--teal);
+}
+.lesson-card-mustard .card-link:hover {
+  color: #b3820a;
 }
 
 .principles-section {

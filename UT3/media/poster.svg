@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Portada de vídeo de ejemplo para UT3: Archivos multimedia">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#20252b"/>
+      <stop offset="60%" stop-color="#181c20"/>
+      <stop offset="100%" stop-color="#0f1215"/>
+    </linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#f5f2ea" fill-opacity="0.12"/>
+    </pattern>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#grid)"/>
+
+  <!-- Acentos decorativos de marca DIW -->
+  <rect x="0" y="0" width="800" height="6" fill="#1d9c91"/>
+  
+  <g transform="translate(60, 50)">
+    <rect x="0" y="16" width="6" height="10" fill="#ef745f"/>
+    <rect x="10" y="8" width="6" height="18" fill="#1d9c91"/>
+    <rect x="20" y="0" width="6" height="26" fill="#eab84b"/>
+    <text x="36" y="22" font-family="'Space Grotesk', system-ui, sans-serif" font-weight="700" font-size="20" fill="#f5f2ea">DIW<tspan fill="#ef745f">.</tspan></text>
+    <text x="110" y="22" font-family="'DM Sans', system-ui, sans-serif" font-size="14" fill="#a0a8b0">UT3 · Archivos multimedia</text>
+  </g>
+
+  <!-- Botón Play central estilizado -->
+  <g transform="translate(400, 225)">
+    <circle r="52" fill="#293137" stroke="#1d9c91" stroke-width="3" opacity="0.9"/>
+    <polygon points="-12,-20 22,0 -12,20" fill="#f5f2ea"/>
+  </g>
+
+  <!-- Textos informativos inferiores -->
+  <g transform="translate(60, 380)">
+    <text x="0" y="0" font-family="'Space Grotesk', system-ui, sans-serif" font-weight="600" font-size="28" fill="#f5f2ea">Vídeo de demostración HTML5</text>
+    <text x="0" y="28" font-family="'DM Sans', system-ui, sans-serif" font-size="16" fill="#1d9c91">Pulsa reproducir para ver los controles y subtítulos activos</text>
+  </g>
+  
+  <!-- Badge formato -->
+  <g transform="translate(680, 385)">
+    <rect x="-10" y="-18" width="68" height="26" rx="4" fill="#39759b" fill-opacity="0.3" stroke="#39759b" stroke-width="1.5"/>
+    <text x="24" y="0" text-anchor="middle" font-family="'DM Sans', monospace" font-size="12" font-weight="700" fill="#f5f2ea">1080p</text>
+  </g>
+</svg>
